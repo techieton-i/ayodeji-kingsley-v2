@@ -1,147 +1,360 @@
-import { useState, useEffect, useCallback, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, ZoomIn, X } from "lucide-react";
 
-const ImageSlider = ({ images }) => {
-  const [index, setIndex] = useState(0);
-  const [direction, setDirection] = useState(1);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const intervalRef = useRef(null);
+const ArtGallerySlider = ({ images }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [fullscreen, setFullscreen] = useState(false);
+  const [direction, setDirection] = useState(0);
+  const autoPlayRef = useRef(null);
+  const containerRef = useRef(null);
 
-  const startInterval = useCallback(() => {
-    if (intervalRef.current) {
-      clearInterval(intervalRef.current);
+  const imageCache = useRef(new Map());
+
+  const getImage = (index) => {
+    if (imageCache.current.has(index)) {
+      return imageCache.current.get(index);
     }
+    const img = new Image();
+    img.src = images[index];
+    imageCache.current.set(index, img);
 
-    intervalRef.current = setInterval(() => {
-      setDirection(1);
-      setIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-    }, 5000);
-  }, [images.length]);
+    return img;
+  };
 
-  const nextSlide = useCallback(() => {
-    setDirection(1);
-    setIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-    startInterval();
-  }, [images.length, startInterval]);
-
-  const prevSlide = useCallback(() => {
-    setDirection(-1);
-    setIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
-    startInterval();
-  }, [images.length, startInterval]);
-
+  // Handle auto-play functionality
   useEffect(() => {
-    startInterval();
+    const startAutoPlay = () => {
+      autoPlayRef.current = setInterval(() => {
+        handleNext();
+      }, 6000);
+    };
+
+    startAutoPlay();
+
     return () => {
-      if (intervalRef.current) {
-        clearInterval(intervalRef.current);
+      if (autoPlayRef.current) {
+        clearInterval(autoPlayRef.current);
       }
     };
-  }, [startInterval]);
+  }, [images.length]);
+
+  // Handle keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (fullscreen) {
+        if (e.key === "ArrowLeft") handlePrev();
+        if (e.key === "ArrowRight") handleNext();
+        if (e.key === "Escape") setFullscreen(false);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [fullscreen]);
+
+  // Handle body scroll lock for fullscreen mode
+  useEffect(() => {
+    if (fullscreen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [fullscreen]);
+
+  const handleNext = () => {
+    setDirection(1);
+    setCurrentIndex((prevIndex) =>
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+    );
+
+    if (autoPlayRef.current) {
+      clearInterval(autoPlayRef.current);
+      autoPlayRef.current = setInterval(() => {
+        handleNext();
+      }, 6000);
+    }
+  };
+
+  const handlePrev = () => {
+    setDirection(-1);
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
+
+    if (autoPlayRef.current) {
+      clearInterval(autoPlayRef.current);
+      autoPlayRef.current = setInterval(() => {
+        handleNext();
+      }, 6000);
+    }
+  };
+
+  const handleDotClick = (index) => {
+    setDirection(index > currentIndex ? 1 : -1);
+    setCurrentIndex(index);
+
+    if (autoPlayRef.current) {
+      clearInterval(autoPlayRef.current);
+      autoPlayRef.current = setInterval(() => {
+        handleNext();
+      }, 6000);
+    }
+  };
+
+  const pauseAutoPlay = () => {
+    if (autoPlayRef.current) {
+      clearInterval(autoPlayRef.current);
+    }
+  };
+
+  const resumeAutoPlay = () => {
+    if (autoPlayRef.current) {
+      clearInterval(autoPlayRef.current);
+    }
+    autoPlayRef.current = setInterval(() => {
+      handleNext();
+    }, 6000);
+  };
+
+  // Slider animation variants
+  const slideVariants = {
+    enter: (direction) => ({
+      x: direction > 0 ? "100%" : "-100%",
+      opacity: 0,
+    }),
+    center: {
+      x: 0,
+      opacity: 1,
+    },
+    exit: (direction) => ({
+      x: direction > 0 ? "-100%" : "100%",
+      opacity: 0,
+    }),
+  };
 
   return (
-    <div className="relative w-full max-w-3xl mx-auto h-[700px] overflow-hidden rounded-lg shadow-lg">
-      <AnimatePresence initial={false} custom={direction}>
-        <motion.img
-          key={index}
-          src={images[index]}
-          alt="Slider Image"
-          className="w-full h-full object-contain absolute top-0 left-0 cursor-pointer"
-          initial={{ x: direction > 0 ? "100%" : "-100%", opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          exit={{ x: direction > 0 ? "-100%" : "100%", opacity: 0 }}
-          transition={{ type: "tween", duration: 0.6 }}
-          onClick={() => setIsModalOpen(true)}
-        />
-      </AnimatePresence>
+    <>
+      {/* Main Slider */}
+      <div
+        ref={containerRef}
+        className="relative w-full max-w-4xl mx-auto h-[550px] bg-black/5 rounded-xl overflow-hidden"
+        onMouseEnter={pauseAutoPlay}
+        onMouseLeave={resumeAutoPlay}
+      >
+        <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
+          <AnimatePresence initial={false} custom={direction} mode="wait">
+            <motion.div
+              key={images[currentIndex]}
+              custom={direction}
+              variants={slideVariants}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              transition={{
+                x: { type: "spring", stiffness: 300, damping: 30 },
+                opacity: { duration: 0.5 },
+              }}
+              className="absolute w-full h-full flex items-center justify-center"
+            >
+              <motion.img
+                src={getImage(currentIndex).src}
+                alt={`Artwork ${currentIndex + 1}`}
+                className="max-w-full max-h-full object-cover"
+                initial={{ scale: 0.95, opacity: 0.8 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.5 }}
+                onClick={() => setFullscreen(true)}
+                style={{ cursor: "zoom-in" }}
+                loading="lazy"
+              />
 
-      {images.length > 1 && (
-        <>
-          <NavButton onClick={prevSlide} position="left" />
-          <NavButton onClick={nextSlide} position="right" />
-        </>
-      )}
+              {/* Zoom indicator */}
+              <motion.div
+                className="absolute bottom-4 right-4 bg-black/20 backdrop-blur-sm text-white p-2 rounded-full"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 0.7 }}
+                whileHover={{ opacity: 1, scale: 1.1 }}
+              >
+                <ZoomIn size={20} />
+              </motion.div>
+            </motion.div>
+          </AnimatePresence>
+        </div>
 
+        {/* Navigation arrows */}
+        {images.length > 1 && (
+          <>
+            <NavigationButton direction="left" onClick={handlePrev} />
+            <NavigationButton direction="right" onClick={handleNext} />
+          </>
+        )}
+
+        {/* Progress indicators */}
+        {images.length > 1 && (
+          <div className="absolute bottom-6 left-0 right-0 flex justify-center gap-2 z-10">
+            {images.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => handleDotClick(index)}
+                className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+                  index === currentIndex
+                    ? "bg-white scale-125"
+                    : "bg-white/40 hover:bg-white/60"
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
+        )}
+
+        {/* Image counter */}
+        <div className="absolute top-4 right-4 bg-black/30 backdrop-blur-sm text-white text-sm px-3 py-1 rounded-full">
+          {currentIndex + 1} / {images.length}
+        </div>
+      </div>
+
+      {/* Fullscreen Modal */}
       <AnimatePresence>
-        {isModalOpen && (
+        {fullscreen && (
           <motion.div
-            className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-            onClick={() => setIsModalOpen(false)}
+            initial={{ opacity: 0, scale: 0.98 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.98 }}
+            transition={{ duration: 0.4, ease: "easeInOut" }}
+            className="fixed inset-0 bg-black/95 backdrop-blur-md z-[9999] flex items-center justify-center"
           >
-            <div className="relative w-full h-full flex items-center justify-center">
-              <AnimatePresence initial={false} custom={direction}>
+            {/* Close Button */}
+            <motion.button
+              className="absolute top-6 right-6 bg-black/30 backdrop-blur-sm text-white p-3 rounded-full z-30"
+              whileHover={{
+                scale: 1.1,
+                backgroundColor: "rgba(255,255,255,0.2)",
+              }}
+              whileTap={{ scale: 0.95 }}
+              onClick={(e) => {
+                e.stopPropagation();
+                setFullscreen(false);
+              }}
+            >
+              <X size={24} />
+            </motion.button>
+
+            {/* Image Container */}
+            <div className="relative w-screen h-screen flex items-center justify-center">
+              <AnimatePresence initial={false} custom={direction} mode="wait">
                 <motion.div
-                  key={index}
-                  className="absolute flex items-center justify-center"
-                  initial={{
-                    x: direction > 0 ? "100%" : "-100%",
-                    opacity: 0,
+                  key={`fullscreen-${currentIndex}`}
+                  custom={direction}
+                  variants={slideVariants}
+                  initial="enter"
+                  animate="center"
+                  exit="exit"
+                  transition={{
+                    x: { type: "spring", stiffness: 300, damping: 30 },
+                    opacity: { duration: 0.5 },
                   }}
-                  animate={{
-                    x: 0,
-                    opacity: 1,
-                    transition: {
-                      type: "spring",
-                      stiffness: 300,
-                      damping: 30,
-                      duration: 0.5,
-                    },
-                  }}
-                  exit={{
-                    x: direction > 0 ? "-100%" : "100%",
-                    opacity: 0,
-                    transition: {
-                      duration: 0.5,
-                      ease: "easeInOut",
-                    },
-                  }}
-                  transition={{ type: "spring", stiffness: 80, damping: 20 }}
+                  className="absolute inset-0 flex items-center justify-center"
+                  onClick={(e) => e.stopPropagation()}
                 >
                   <motion.img
-                    src={images[index]}
-                    alt="Full Image"
-                    className="max-w-[90vw] max-h-[90vh] object-contain rounded-lg"
-                    layout
+                    src={getImage(currentIndex).src}
+                    alt={`Fullscreen Artwork ${currentIndex + 1}`}
+                    className="max-w-full max-h-full w-auto h-auto object-contain rounded shadow-2xl"
+                    initial={{ scale: 0.95, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    exit={{ scale: 0.95, opacity: 0 }}
+                    transition={{ duration: 0.5, ease: "easeInOut" }}
+                    loading="lazy"
                   />
                 </motion.div>
               </AnimatePresence>
 
-              <NavButton
-                onClick={(e) => {
-                  e.stopPropagation();
-                  prevSlide();
-                }}
-                position="left"
-                modal
-              />
-              <NavButton
-                onClick={(e) => {
-                  e.stopPropagation();
-                  nextSlide();
-                }}
-                position="right"
-                modal
-              />
+              {/* Navigation */}
+              {images.length > 1 && (
+                <>
+                  <NavigationButton
+                    direction="left"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handlePrev();
+                    }}
+                    fullscreen
+                  />
+                  <NavigationButton
+                    direction="right"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleNext();
+                    }}
+                    fullscreen
+                  />
+                </>
+              )}
+
+              {/* Progress Indicators */}
+              <div className="absolute bottom-8 left-0 right-0 flex justify-center gap-3 z-30">
+                {images.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleDotClick(index);
+                    }}
+                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                      index === currentIndex
+                        ? "bg-white scale-125"
+                        : "bg-white/30 hover:bg-white/60"
+                    }`}
+                    aria-label={`Go to fullscreen slide ${index + 1}`}
+                  />
+                ))}
+              </div>
+
+              {/* Counter */}
+              <div className="absolute top-6 left-6 bg-black/30 backdrop-blur-sm text-white text-sm px-4 py-2 rounded-full">
+                {currentIndex + 1} / {images.length}
+              </div>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
+    </>
   );
 };
 
-const NavButton = ({ onClick, position, modal = false }) => (
-  <button
-    onClick={onClick}
-    className={`absolute ${position === "left" ? "left-2 md:left-10" : "right-2 md:right-10"} top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full z-10 ${modal ? "!bg-white bg-opacity-50 text-black z-50" : ""}`}
-  >
-    {position === "left" ? <ChevronLeft /> : <ChevronRight />}
-  </button>
-);
+// Navigation button component
+const NavigationButton = ({ direction, onClick, fullscreen = false }) => {
+  const isLeft = direction === "left";
 
-export default ImageSlider;
+  return (
+    <motion.button
+      className={`absolute ${isLeft ? "left-3" : "right-3"} top-1/2 -translate-y-1/2 
+        ${fullscreen ? "bg-black/20" : "bg-black/30"} backdrop-blur-sm 
+        text-white p-3 rounded-full z-20`}
+      whileHover={{
+        scale: 1.1,
+        backgroundColor: fullscreen
+          ? "rgba(255,255,255,0.2)"
+          : "rgba(0,0,0,0.5)",
+      }}
+      whileTap={{ scale: 0.95 }}
+      initial={{ opacity: 0.7 }}
+      animate={{ opacity: 0.7 }}
+      transition={{ duration: 0.2 }}
+      onClick={onClick}
+      aria-label={isLeft ? "Previous image" : "Next image"}
+    >
+      {isLeft ? <ChevronLeft size={24} /> : <ChevronRight size={24} />}
+    </motion.button>
+  );
+};
+
+export default ArtGallerySlider;

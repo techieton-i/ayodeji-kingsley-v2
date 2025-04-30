@@ -1,4 +1,4 @@
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const artworks = [
@@ -7,35 +7,40 @@ const artworks = [
     title: "Carpe diem",
     key: "CARPIE_DIEM",
     imgUrl:
-      "https://res.cloudinary.com/dl3haplj1/image/upload/w_700/f_auto/q_auto/v1/ayodeji-kingsley/Selected/Collections/Carpe%20Diem/Rat%20Race/2dff9fe73e4546b8ece37981f9d8f1ed",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/w_700/f_webp/q_auto/v1/ayodeji-kingsley/Selected/Collections/Carpe%20Diem/Rat%20Race/2dff9fe73e4546b8ece37981f9d8f1ed",
   },
   {
     id: 2,
     title: "Illusion of Control",
+    key: "ILLUSION_OF_CONTROL",
     imgUrl:
       "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto/v1/ayodeji-kingsley/Selected/Collections/Illusion%20of%20Control/Pouched%20in%20Inequity/93f445cf9f23939465b4ae1e8934459f",
   },
   {
     id: 3,
     title: "Outlook of life",
+    key: "OUTLOOK_OF_LIFE",
     imgUrl:
-      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low,w_700/v1/ayodeji-kingsley/Selected/Collections/Outlook%20of%20Life/Survival%20Dance/dc29ff2847537770e1d5f4c7518047a8",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low,w_700/v1/ayodeji-kingsley/Selected/Collections/Outlook%20of%20Life/Survival%20Dance/survival%201",
   },
   {
     id: 4,
     title: "Owl Series",
+    key: "OWL_SERIES",
     imgUrl:
       "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low,w_700/v1/ayodeji-kingsley/Selected/Collections/Owl%20Series/2%20Owl%20clock/163b632c927ecf489ab010f2bff534ac",
   },
   {
     id: 5,
     title: "Road back to you",
+    key: "ROAD_BACK_TO_YOU",
     imgUrl:
       "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low,w_700/v1/ayodeji-kingsley/Road%20back%20to%20you/Identity%202021",
   },
   {
     id: 6,
     title: "Symbol of hope",
+    key: "SYMBOL_OF_HOPE",
     imgUrl:
       "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low,w_700/v1/ayodeji-kingsley/Selected/Collections/Symbol%20of%20Hope/Dash%20of%20hope/3bed97e3fc5c85967f718d26d8850c89",
   },

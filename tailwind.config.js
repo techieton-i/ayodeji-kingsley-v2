@@ -22,6 +22,10 @@ export default {
           600: "#bf4e16",
         },
       },
+      fontFamily: {
+        heading: ["Sora", "sans-serif"],
+        body: ["Inter", "sans-serif"],
+      },
     },
   },
   plugins: [],

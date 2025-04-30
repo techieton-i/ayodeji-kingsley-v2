@@ -1,12 +1,47 @@
-# React + Vite
+# Scrap Metal Art Gallery – Ayodeji Kingsley
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, minimalist web gallery showcasing the unique scrap metal artwork of Nigerian artist **Ayodeji Kingsley**. This site combines clean design, smooth animations, and a responsive interface to create an immersive digital exhibition experience.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🎨 About the Artist
 
-## Expanding the ESLint configuration
+**Ayodeji Kingsley** is a contemporary artist known for transforming discarded scrap metal into captivating pieces of art. His work explores the intersection of industrial waste and creative rebirth, turning the forgotten into the unforgettable.
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🌐 Features
+
+- ✨ **Interactive Image Slider** – Smooth, fullscreen-enabled artwork viewing experience.
+- 🎭 **Artful Transitions** – Seamless Framer Motion animations enhance storytelling.
+- 📱 **Responsive Design** – Optimized for mobile, tablet, and desktop viewing.
+- 🎨 **Modern Aesthetic** – Clean typography, subtle gradients, and minimalist layout.
+- 🔍 **Category-Based Navigation** – Dynamic collection rendering based on route.
+
+---
+
+## 📁 Tech Stack
+
+- **React** + **React Router**
+- **Tailwind CSS** – Utility-first styling
+- **Framer Motion** – For animation and transitions
+- **Vite** – Fast build and dev server
+- **JSON-based Data** – Easy to manage collections and content
+
+---
+
+## 🚀 Getting Started
+
+```bash
+# Clone the repository
+git clone https://github.com/techieton-i/ayodeji-kingsley-v2.git
+
+# Navigate into the directory
+cd ayodeji-kingsley-v2
+
+# Install dependencies
+npm install
+
+# Run the development server
+npm run dev
+```
