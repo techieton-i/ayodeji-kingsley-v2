@@ -204,7 +204,7 @@ const Navbar = () => {
             letterSpacing: "1px",
           }}
         >
-          <span className={isHomepage ? "text-rust-400" : "text-rust-500"}>
+          <span className={isHomepage ? "text-white-400" : "text-rust-500"}>
             AYODEJI KINGSLEY
           </span>
         </Link>
