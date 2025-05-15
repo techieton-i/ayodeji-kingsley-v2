@@ -3,3 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.scroll-hide::-webkit-scrollbar {
+  display: none;
+}
+.scroll-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}

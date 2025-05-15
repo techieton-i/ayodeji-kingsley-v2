@@ -1,6 +1,6 @@
 import ImageGrid from "@/components/ImageGrid";
 import { galleryData } from "@/data/galleryData";
-import React from "react";
+import React, { useState } from "react";
 
 const Gallery = () => {
   return (
