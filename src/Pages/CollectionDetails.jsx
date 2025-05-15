@@ -49,7 +49,7 @@ const CollectionDetails = () => {
     return (
       <div className="h-screen flex items-center justify-center bg-slate-50">
         <motion.div
-          className="w-16 h-16 rounded-full bg-gradient-to-r from-indigo-400 to-indigo-600 shadow-xl"
+          className="w-16 h-16 rounded-full bg-gradient-to-r from-rust-400 to-rust-600 shadow-xl"
           animate={{ scale: [1, 1.3, 1], opacity: [0.6, 1, 0.6] }}
           transition={{ duration: 1.6, ease: "easeInOut", repeat: Infinity }}
         />

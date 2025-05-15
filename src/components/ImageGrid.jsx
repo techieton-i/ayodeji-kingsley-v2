@@ -2,8 +2,9 @@ import { useLazyLoad } from "@/utils/hooks";
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { Blurhash } from "react-blurhash";
+import { ArtModal } from "./LightBox";
 
-const LazyLoadImage = ({ image, index }) => {
+const LazyLoadImage = ({ image, index, onClick }) => {
   const { ref, isLoaded, blurhash } = useLazyLoad();
   const containerRef = useRef(null);
   const [size, setSize] = useState({ width: 0, height: 0 });
@@ -51,7 +52,10 @@ const LazyLoadImage = ({ image, index }) => {
         }`}
         loading="lazy"
       />
-      <div className="absolute inset-0 flex flex-col justify-center items-center bg-gradient-to-t from-black/80 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 p-4">
+      <div
+        className="absolute inset-0 flex flex-col justify-center items-center bg-gradient-to-t from-black/80 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 p-4 cursor-pointer"
+        onClick={() => onClick(image.images[0], image.title, image.description)}
+      >
         <motion.h3
           className="text-lg font-semibold text-white text-center mb-2"
           initial={{ y: 10 }}
@@ -74,12 +78,34 @@ const LazyLoadImage = ({ image, index }) => {
 };
 
 const ImageGrid = ({ images }) => {
+  const [modalData, setModalData] = useState(null);
+
+  const openArtModal = (image, title, description) => {
+    setModalData({ image, title, description });
+  };
+
+  const closeArtModal = () => setModalData(null);
+
   return (
-    <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 p-4">
-      {images?.map((image, index) => (
-        <LazyLoadImage key={index} image={image} index={index} />
-      ))}
-    </div>
+    <>
+      <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 p-4">
+        {images?.map((image, index) => (
+          <LazyLoadImage
+            key={index}
+            image={image}
+            index={index}
+            onClick={openArtModal}
+          />
+        ))}
+      </div>
+      <ArtModal
+        isOpen={!!modalData}
+        imageSrc={modalData?.image || ""}
+        title={modalData?.title}
+        description={modalData?.description}
+        onClose={closeArtModal}
+      />
+    </>
   );
 };
 

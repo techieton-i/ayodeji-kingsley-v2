@@ -2,7 +2,7 @@
 import { introduction } from "@/constants/constants";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Quote } from "lucide-react";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
