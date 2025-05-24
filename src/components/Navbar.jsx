@@ -204,7 +204,7 @@ const Navbar = () => {
             letterSpacing: "1px",
           }}
         >
-          <span className={isHomepage ? "text-white-400" : "text-rust-500"}>
+          <span className={isHomepage ? "text-white-400" : "text-rust-600"}>
             AYODEJI KINGSLEY
           </span>
         </Link>
@@ -294,7 +294,7 @@ const Navbar = () => {
                   className={`text-2xl font-bold px-4 py-3 w-full text-right border-r-4 ${
                     isHomepage
                       ? "text-white hover:text-rust-300 border-rust-400"
-                      : "text-metal-900 hover:text-rust-500 border-rust-500"
+                      : "text-metal-900 hover:text-rust-500 border-rust-600"
                   }`}
                   tabIndex={isOpen ? 0 : -1}
                   onClick={() => setIsOpen(false)}

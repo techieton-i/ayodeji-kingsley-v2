@@ -1,4 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useState } from "react";
 
 export function Lightbox({ isOpen, imageSrc, onClose }) {
   if (!isOpen) return null;
@@ -30,6 +32,77 @@ export function Lightbox({ isOpen, imageSrc, onClose }) {
 }
 
 export function ArtModal({ isOpen, imageSrc, title, description, onClose }) {
+  const isArray = Array.isArray(imageSrc);
+  const [current, setCurrent] = useState(0);
+
+  const handlePrev = () => {
+    setCurrent((prev) => (prev === 0 ? imageSrc.length - 1 : prev - 1));
+  };
+
+  const handleNext = () => {
+    setCurrent((prev) => (prev === imageSrc.length - 1 ? 0 : prev + 1));
+  };
+
+  const renderImage = () => {
+    if (!isArray) {
+      return (
+        <motion.img
+          src={imageSrc}
+          alt={title || "Artwork"}
+          className="w-full h-auto max-h-[70vh] object-contain rounded"
+          initial={{ scale: 0.95 }}
+          animate={{ scale: 1 }}
+          exit={{ scale: 0.95 }}
+          transition={{ type: "spring", stiffness: 300, damping: 25 }}
+          loading="lazy"
+        />
+      );
+    }
+
+    if (imageSrc.length === 1) {
+      return (
+        <motion.img
+          src={imageSrc[0]}
+          alt={title || "Artwork"}
+          className="w-full h-auto max-h-[70vh] object-contain rounded"
+          initial={{ scale: 0.95 }}
+          animate={{ scale: 1 }}
+          exit={{ scale: 0.95 }}
+          transition={{ type: "spring", stiffness: 300, damping: 25 }}
+          loading="lazy"
+        />
+      );
+    }
+
+    return (
+      <div className="relative w-full">
+        <motion.img
+          key={current}
+          src={imageSrc[current]}
+          alt={`Slide ${current + 1}`}
+          loading="lazy"
+          initial={{ scale: 0.95 }}
+          animate={{ scale: 1 }}
+          exit={{ scale: 0.95 }}
+          className="w-full h-auto max-h-[70vh] object-contain rounded"
+        />
+        {/* Arrows */}
+        <button
+          onClick={handlePrev}
+          className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full hover:bg-white transition"
+        >
+          <ChevronLeft />
+        </button>
+        <button
+          onClick={handleNext}
+          className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full hover:bg-white transition"
+        >
+          <ChevronRight />
+        </button>
+      </div>
+    );
+  };
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -48,17 +121,9 @@ export function ArtModal({ isOpen, imageSrc, title, description, onClose }) {
             transition={{ type: "spring", stiffness: 300, damping: 25 }}
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Image */}
+            {/* Image or Slider */}
             <div className="w-full md:w-1/2 flex items-center justify-center p-2">
-              <motion.img
-                src={imageSrc}
-                alt={title || "Artwork"}
-                className="w-full h-auto max-h-[70vh] object-contain rounded"
-                initial={{ scale: 0.95 }}
-                animate={{ scale: 1 }}
-                exit={{ scale: 0.95 }}
-                transition={{ type: "spring", stiffness: 300, damping: 25 }}
-              />
+              {renderImage()}
             </div>
 
             {/* Text Content */}

@@ -8,6 +8,7 @@ import Gallery from "./Pages/Gallery";
 import CollectionDetails from "./Pages/CollectionDetails";
 import AwardShowcaseScroll from "./Pages/Awards";
 import Biography from "./Pages/Biography";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/awards" element={<AwardShowcaseScroll />} />
           <Route path="/biography" element={<Biography />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </Suspense>
   );
