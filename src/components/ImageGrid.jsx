@@ -54,7 +54,7 @@ const LazyLoadImage = ({ image, index, onClick }) => {
       />
       <div
         className="absolute inset-0 flex flex-col justify-center items-center bg-gradient-to-t from-black/80 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 p-4 cursor-pointer"
-        onClick={() => onClick(image.images[0], image.title, image.description)}
+        onClick={() => onClick(image.images, image.title, image.description)}
       >
         <motion.h3
           className="text-lg font-semibold text-white text-center mb-2"
