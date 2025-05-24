@@ -54,7 +54,7 @@ const LazyLoadImage = ({ image, index, onClick }) => {
       />
       <div
         className="absolute inset-0 flex flex-col justify-center items-center bg-gradient-to-t from-black/80 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 p-4 cursor-pointer"
-        onClick={() => onClick(image.images[0], image.title, image.description)}
+        onClick={() => onClick(image.images, image.title, image.description)}
       >
         <motion.h3
           className="text-lg font-semibold text-white text-center mb-2"
@@ -70,7 +70,7 @@ const LazyLoadImage = ({ image, index, onClick }) => {
           animate={{ y: 0 }}
           transition={{ delay: 0.25 }}
         >
-          {image.description}
+          {image.desc}
         </motion.p>
       </div>
     </motion.div>
@@ -78,10 +78,10 @@ const LazyLoadImage = ({ image, index, onClick }) => {
 };
 
 const ImageGrid = ({ images }) => {
-  const [modalData, setModalData] = useState(null);
+  const [modalData, setModalData] = useState({ show: false });
 
   const openArtModal = (image, title, description) => {
-    setModalData({ image, title, description });
+    setModalData({ image, title, description, show: true });
   };
 
   const closeArtModal = () => setModalData(null);
@@ -98,13 +98,15 @@ const ImageGrid = ({ images }) => {
           />
         ))}
       </div>
-      <ArtModal
-        isOpen={!!modalData}
-        imageSrc={modalData?.image || ""}
-        title={modalData?.title}
-        description={modalData?.description}
-        onClose={closeArtModal}
-      />
+      {modalData?.show && (
+        <ArtModal
+          isOpen={modalData?.show || false}
+          imageSrc={modalData?.image || ""}
+          title={modalData?.title}
+          description={modalData?.description}
+          onClose={closeArtModal}
+        />
+      )}
     </>
   );
 };

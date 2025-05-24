@@ -8,6 +8,9 @@ import Gallery from "./Pages/Gallery";
 import CollectionDetails from "./Pages/CollectionDetails";
 import AwardShowcaseScroll from "./Pages/Awards";
 import Biography from "./Pages/Biography";
+import Footer from "./components/Footer";
+import Exhibitions from "./Pages/Exhibitions";
+import Residency from "./Pages/Residency";
 
 function App() {
   return (
@@ -26,7 +29,10 @@ function App() {
           <Route path="/art/:id" element={<ArtDetail />} />
           <Route path="/awards" element={<AwardShowcaseScroll />} />
           <Route path="/biography" element={<Biography />} />
+          <Route path="/exhibitions" element={<Exhibitions />} />
+          <Route path="/residency" element={<Residency />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </Suspense>
   );

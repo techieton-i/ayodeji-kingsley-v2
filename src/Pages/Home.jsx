@@ -1,7 +1,5 @@
-// Home.js
 import { introduction } from "@/constants/constants";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Quote } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Home = () => {
@@ -13,7 +11,7 @@ const Home = () => {
       className=" mx-auto "
     >
       <HeroSection />
-      <div className="container mx-auto">
+      <div className="mx-auto">
         <AboutSection />
         <CTASection />
       </div>
@@ -107,7 +105,7 @@ const AboutSection = () => {
       </motion.h2>
 
       {/* about content 1 */}
-      <motion.div className="relative flex flex-col md:flex-row items-center justify-between px-6 lg:px-[10rem] gap-12 py-16 bg-gradient-to-b from-gray-100 to-white dark:from-gray-900 dark:to-gray-800 dark:!bg-none">
+      <motion.div className="mx-auto container relative flex flex-col md:flex-row items-center justify-between px-6 lg:px-[10rem] gap-12 py-16 bg-gradient-to-b from-gray-100 to-white dark:from-gray-900 dark:to-gray-800 dark:!bg-none">
         <div className="absolute top-0 left-0 w-full h-full opacity-10 bg-[url('https://www.transparenttextures.com/patterns/black-thread-light.png')]" />
 
         {/* Image Container */}
@@ -179,7 +177,7 @@ const AboutSection = () => {
       </motion.div>
 
       {/* about content 2 */}
-      <motion.div className="relative flex flex-col md:flex-row-reverse items-center justify-between px-6 lg:px-[10rem] gap-12 py-16 bg-gradient-to-b from-gray-100 to-white dark:from-gray-900 dark:to-gray-800 dark:!bg-none">
+      <motion.div className="mx-auto container relative flex flex-col md:flex-row-reverse items-center justify-between px-6 lg:px-[10rem] gap-12 py-16 bg-gradient-to-b from-gray-100 to-white dark:from-gray-900 dark:to-gray-800 dark:!bg-none">
         <div className="absolute top-0 left-0 w-full h-full opacity-10 bg-[url('https://www.transparenttextures.com/patterns/black-thread-light.png')]" />
 
         {/* Image Container */}
@@ -238,7 +236,7 @@ const CTASection = () => {
   return (
     <motion.section
       className="py-16 flex flex-col items-center justify-center text-center bg-gray-900 text-white relative overflow-hidden h-[50vh]"
-      initial={{ scale: 0.9, opacity: 0 }}
+      initial={{ scale: 1, opacity: 0 }}
       whileInView={{ scale: 1, opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
@@ -285,87 +283,3 @@ const CTASection = () => {
     </motion.section>
   );
 };
-
-// const CTASection = () => {
-//   return (
-//     <section className="relative py-24 flex items-center justify-center bg-gray-100 dark:bg-gray-900 overflow-hidden">
-//       {/* Floating Card Container */}
-//       <motion.div
-//         className="relative w-full max-w-4xl mx-4 bg-white dark:bg-gray-800 rounded-2xl shadow-2xl overflow-hidden"
-//         initial={{ opacity: 0, y: 50 }}
-//         whileInView={{ opacity: 1, y: 0 }}
-//         viewport={{ once: true }}
-//         transition={{ duration: 0.8 }}
-//       >
-//         {/* Background Layers with Parallax */}
-//         <motion.div
-//           className="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-blue-500/10 dark:from-orange-600/5 dark:to-blue-600/5"
-//           initial={{ scale: 1.2 }}
-//           whileInView={{ scale: 1 }}
-//           transition={{ duration: 8, repeat: Infinity, repeatType: "reverse" }}
-//         />
-
-//         <motion.div
-//           className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"
-//           animate={{ x: [0, 10, 0], y: [0, -5, 0] }}
-//           transition={{ duration: 20, repeat: Infinity, repeatType: "reverse" }}
-//         />
-
-//         {/* Content */}
-//         <div className="relative z-10 p-12 md:p-16 text-center">
-//           <motion.h2
-//             className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white"
-//             initial={{ opacity: 0 }}
-//             whileInView={{ opacity: 1 }}
-//             transition={{ delay: 0.3 }}
-//           >
-//             Explore the <span className="text-orange-500">Collections</span>
-//           </motion.h2>
-
-//           <motion.p
-//             className="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto"
-//             initial={{ opacity: 0 }}
-//             whileInView={{ opacity: 1 }}
-//             transition={{ delay: 0.5 }}
-//           >
-//             Discover unique metal art pieces that transform spaces into
-//             galleries.
-//           </motion.p>
-
-//           <motion.div
-//             className="mt-8"
-//             whileHover={{ scale: 1.05 }}
-//             whileTap={{ scale: 0.95 }}
-//           >
-//             <Link
-//               to="/collections"
-//               className="inline-block px-8 py-3.5 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
-//             >
-//               View Collections →
-//             </Link>
-//           </motion.div>
-//         </div>
-
-//         {/* Floating decorative elements */}
-//         <motion.div
-//           className="absolute -top-10 -left-10 w-32 h-32 bg-orange-400/20 rounded-full blur-xl "
-//           animate={{
-//             scale: [1, 1.2, 1],
-//             opacity: [0.3, 0.5, 0.3],
-//           }}
-//           transition={{
-//             duration: 8,
-//             repeat: Infinity,
-//           }}
-//         />
-//       </motion.div>
-
-//       {/* <motion.div
-//         className="absolute inset-0 bg-[url('https://img.freepik.com/free-photo/3d-rendering-robotic-eagle_23-2151056226.jpg?t=st=1743274638~exp=1743278238~hmac=265c4fb6acaeeb0a7602132fd4696b0cdc38608470ff1b26bd0aefffd2cfe2d4&w=826')]   bg-cover bg-center opacity-[0.08]"
-//         initial={{ scale: 1.1 }}
-//         animate={{ scale: 1 }}
-//         transition={{ duration: 5, repeat: Infinity, repeatType: "reverse" }}
-//       /> */}
-//     </section>
-//   );
-// };
