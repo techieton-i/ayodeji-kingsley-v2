@@ -145,6 +145,7 @@ const ArtGallerySlider = ({ images }) => {
       {/* Main Slider */}
       <div
         ref={containerRef}
+        // className="relative w-full max-w-4xl mx-auto  h-[550px]"
         className="relative w-full max-w-4xl mx-auto h-[550px] bg-black/5 rounded-xl overflow-hidden"
         onMouseEnter={pauseAutoPlay}
         onMouseLeave={resumeAutoPlay}
