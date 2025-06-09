@@ -2,25 +2,12 @@ export const artworks = [
   {
     id: "art1",
     title: "Art Review",
-    // title: "Fragments of Light",
     award:
       "Our Home, Natural world Exhibition MetaSpace Gallery, Liverpool, UK March, 2025",
     link: "https://metaspacegallery.co.uk/2025/02/23/curatorial-review-of-ayodeji-kingsley-in-our-home-natural-world/",
-    // award: "Gold Medal – International Art Expo 2023",
-    // description:
-    // "An exploration of memory and emotion through abstract brushwork and layered textures. Recognized for its innovative use of mixed media and emotional resonance.",
     image:
       "https://res.cloudinary.com/dl3haplj1/image/upload/f_auto,q_auto/v1/ayodeji-kingsley/Website%202/Media%20And%20Awards/Media/Art%20Review/ee3ed52346be797825a7a2fdf820f77b",
   },
-  // {
-  //   id: "art2",
-  //   title: "Echoes of Silence",
-  //   award: "Best Modern Piece – Lagos Art Fair 2022",
-  //   description:
-  //     "A minimalist expression of solitude using negative space and muted tones, exploring isolation in the modern world.",
-  //   image:
-  //     "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low/v1/ayodeji-kingsley/Selected/Gallery/Eclipse/Eclipse",
-  // },
   {
     id: "art2",
     title: "Artist of the Month/ Artist Spotlight",

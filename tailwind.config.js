@@ -25,6 +25,7 @@ export default {
       fontFamily: {
         heading: ["Sora", "sans-serif"],
         body: ["Inter", "sans-serif"],
+        hero: ["Outfit", "sans-serif"],
       },
     },
   },

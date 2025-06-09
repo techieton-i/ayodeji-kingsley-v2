@@ -1,56 +1,10 @@
+import { ImageSlider } from "@/components/ImageSlider";
 import { exhibitionData } from "@/data/exhibitionData";
 import { useInView, motion } from "framer-motion";
 import { ArrowBigDown, ChevronLeft, ChevronRight } from "lucide-react";
 import React, { useEffect, useRef, useState } from "react";
 
-const ImageSlider = ({ imageArray }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [loaded, setLoaded] = useState(false);
-
-  useEffect(() => setLoaded(false), [currentIndex]);
-
-  const changeImage = (direction) => {
-    setCurrentIndex((prev) =>
-      direction === "next"
-        ? (prev + 1) % imageArray.length
-        : prev === 0
-          ? imageArray.length - 1
-          : prev - 1
-    );
-  };
-
-  return (
-    <div className="relative w-full md:w-1/2 rounded-xl shadow-lg object-cover max-h-[70vh] cursor-pointer">
-      {!loaded && (
-        <div className="absolute inset-0 flex items-center justify-center bg-opacity-70 bg-gray-100 z-10">
-          <div className="w-8 h-8 border-4 border-gray-300 border-t-transparent rounded-full animate-spin" />
-        </div>
-      )}
-      <img
-        src={imageArray[currentIndex]}
-        alt={`Slide ${currentIndex + 1}`}
-        className={`w-full h-auto md:max-h-[90vh] rounded transition-opacity duration-500 ${
-          loaded ? "opacity-100" : "opacity-30"
-        }`}
-        onLoad={() => setLoaded(true)}
-      />
-      <button
-        onClick={() => changeImage("prev")}
-        className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-opacity-70 bg-gray-800 text-white p-2 rounded-full"
-      >
-        <ChevronLeft />
-      </button>
-      <button
-        onClick={() => changeImage("next")}
-        className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-opacity-70 bg-gray-800 text-white p-2 rounded-full"
-      >
-        <ChevronRight />
-      </button>
-    </div>
-  );
-};
-
-function Exhibitions() {
+function Exhibitions({}) {
   const sectionRefs = useRef([]);
   const containerRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -87,7 +41,7 @@ function Exhibitions() {
         }}
         className="absolute top-10 left-1/2 -translate-x-1/2 z-10 text-xl md:text-3xl font-bold text-center mb-20 bg-clip-text text-transparent bg-gradient-to-r from-zinc-400 to-zinc-700 font-heading tracking-tight"
       >
-        Selected Media
+        Exhibitions
       </motion.h1>
 
       {exhibitionData.map((art, index) => {

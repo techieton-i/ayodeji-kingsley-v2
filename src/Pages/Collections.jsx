@@ -54,7 +54,15 @@ const Collections = () => {
       exit={{ opacity: 0 }}
       className="container mx-auto p-4 mt-5"
     >
-      <h1 className="text-4xl font-bold text-center mb-6">Art Collections</h1>
+      <motion.h1
+        variants={{
+          hidden: { opacity: 0 },
+          visible: { opacity: 1, transition: { duration: 0.8 } },
+        }}
+        className="z-10 text-xl md:text-4xl font-bold text-center mb-20 bg-clip-text text-transparent bg-gradient-to-r from-zinc-400 to-zinc-700 font-heading tracking-tight"
+      >
+        Art Collections
+      </motion.h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 gap-y-20 ">
         {artworks.map((art) => (
           <motion.div

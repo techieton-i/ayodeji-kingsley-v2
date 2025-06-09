@@ -29,43 +29,41 @@ const HeroSection = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
-      {/* Background Video */}
-      {/* <video
-        className="absolute top-0 left-0 w-full h-full object-cover"
-        src="https://videocdn.cdnpk.net/videos/b46cb157-33b5-485a-b226-dcc8dcc251d0/horizontal/previews/videvo_watermarked/large.mp4"
-        autoPlay
-        loop
-        muted
-        playsInline
-      /> */}
+      {/* Background Image */}
       <img
         className="absolute top-0 left-0 w-full h-full object-cover"
         src="https://res.cloudinary.com/dl3haplj1/image/upload/f_auto,q_auto/v1/ayodeji-kingsley/Website%202/Landing%20page/landing-gif"
+        alt="Background"
       />
 
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/100 to-transparen"></div>
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent" />
 
+      {/* Hero Content */}
       <motion.div
-        className="relative z-10 max-w-2xl mx-auto text-white px-4"
+        className="relative z-10 max-w-3xl mx-auto px-6 text-white"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.5 }}
       >
-        <h1 className="text-6xl font-extrabold mb-4 tracking-wide">
-          Crafted in Metal, Inspired by Passion
+        <p className="text-lg sm:text-xl text-orange-400 mb-2">Hi, I'm</p>
+
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-wide leading-tight mb-4 font-hero">
+          Ayodeji Kingsley
         </h1>
-        <p className="text-lg mb-6">
-          Discover exquisite handcrafted metal sculptures that blend artistry
-          and craftsmanship.
+
+        <p className="text-lg sm:text-xl text-gray-200 mb-8 max-w-xl mx-auto">
+          A passionate visual artist crafting modern, metal and scrap arts
         </p>
+
         <motion.div
-          whileHover={{ scale: 1.1 }}
+          whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="inline-flex"
+          className="inline-block"
         >
           <Link
             to="/collections"
-            className="block text-center bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition w-auto leading-[normal]"
+            className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-8 rounded-lg shadow-lg transition duration-300"
           >
             Explore Collections
           </Link>
@@ -91,92 +89,9 @@ const AboutSection = () => {
       viewport={{ once: true }}
       transition={{ duration: 1 }}
     >
-      {/* Background Artistic Elements */}
       <div className="absolute top-0 left-0 w-full h-full opacity-10 bg-[url('https://www.transparenttextures.com/patterns/black-thread-light.png')]" />
 
-      {/* <motion.h2
-        className="relative text-3xl font-semibold text-gray-900 dark:text-gray-100 mb-5"
-        initial={{ y: -20, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.8, delay: 0.3 }}
-      >
-        About the Artist
-      </motion.h2> */}
-
-      {/* about content 1 */}
-      <motion.div className="mx-auto container relative flex flex-col md:flex-row items-center justify-between px-6 lg:px-[10rem] gap-12 py-16 bg-gradient-to-b from-gray-100 to-white dark:from-gray-900 dark:to-gray-800 dark:!bg-none">
-        <div className="absolute top-0 left-0 w-full h-full opacity-10 bg-[url('https://www.transparenttextures.com/patterns/black-thread-light.png')]" />
-
-        {/* Image Container */}
-        <div className="md:w-1/2 flex justify-center relative">
-          <motion.img
-            src="https://res.cloudinary.com/dl3haplj1/image/upload/f_auto,q_auto/v1/ayodeji-kingsley/Website%202/Landing%20page/artist-pic-1"
-            alt="Artist"
-            className="rounded-lg shadow-2xl border-4 border-white w-full max-w-lg transform hover:scale-105 transition-transform duration-500"
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1 }}
-          />
-        </div>
-
-        {/* Text Content */}
-        <motion.div
-          className="md:w-1/2 text-left space-y-6 relative z-10"
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
-        >
-          <h2 className="text-2xl font-semibold text-gray-900 dark:text-white leading-tight tracking-wide">
-            <i>Ayodeji Kingsley transforms the discarded into the divine.</i>
-          </h2>
-          <motion.div
-            className="space-y-5 dark:text-white "
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-20%" }}
-            variants={{
-              visible: { transition: { staggerChildren: 0.1 } },
-            }}
-          >
-            <motion.p className="font-medium">
-              "My work evokes the powerful emotions hidden within delicate
-              visions," says the artist, whose sculptures blend surrealism and
-              wordplay to create an interface between subject and viewer.
-              Through metals—rigid yet malleable—he reshapes waste into animals,
-              tools, and objects that bridge fantasy and reality.
-            </motion.p>
-            <motion.div className="space-y-4">
-              {/* <p>
-                For years, artist <strong>Ayodeji Kingsley</strong> has
-                reimagined art through a unique lens, transforming waste into
-                striking aesthetic pieces. His work gives new life to
-                metals—rigid yet malleable—shaping them into animals, tools, and
-                everyday objects.
-              </p> */}
-              <p>
-                Where others see scrap, Kingsley sees potential. His practice
-                champions sustainability, revealing latent beauty in forgotten
-                materials. Each piece is a meditation on creation, echoing his
-                belief:{" "}
-                <q>
-                  <i>
-                    I am a co-creator in the direct image of the unequaled
-                    Ultimate Creator.
-                  </i>
-                </q>
-              </p>
-              <footer className="font-medium mt-1">
-                <i>—Ayodeji Kingsley</i>
-              </footer>
-            </motion.div>
-          </motion.div>
-          <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed font-light"></p>
-          <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed font-light"></p>
-        </motion.div>
-      </motion.div>
-
-      {/* about content 2 */}
-      <motion.div className="mx-auto container relative flex flex-col md:flex-row-reverse items-center justify-between px-6 lg:px-[10rem] gap-12 py-16 bg-gradient-to-b from-gray-100 to-white dark:from-gray-900 dark:to-gray-800 dark:!bg-none">
+      <motion.div className="font-body mx-auto container relative flex flex-col md:flex-row-reverse items-center justify-between px-6 lg:px-[10rem] gap-12 py-16 bg-gradient-to-b from-gray-100 to-white dark:from-gray-900 dark:to-gray-800 dark:!bg-none">
         <div className="absolute top-0 left-0 w-full h-full opacity-10 bg-[url('https://www.transparenttextures.com/patterns/black-thread-light.png')]" />
 
         {/* Image Container */}
@@ -221,6 +136,109 @@ const AboutSection = () => {
               kaleidoscopic world around us. My work brings me peace and offers
               me a place to meditate and appreciate the Ultimate creator(God)
               and the beauty of the world”
+            </motion.p>
+          </motion.div>
+          <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed font-light"></p>
+          <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed font-light"></p>
+        </motion.div>
+      </motion.div>
+      {/* about content 1 */}
+      <motion.div className="mx-auto container relative flex flex-col md:flex-row items-center justify-between px-6 lg:px-[10rem] gap-12 py-10 bg-gradient-to-b from-gray-100 to-white dark:from-gray-900 dark:to-gray-800 dark:!bg-none">
+        <div className="absolute top-0 left-0 w-full h-full opacity-10 bg-[url('https://www.transparenttextures.com/patterns/black-thread-light.png')]" />
+
+        {/* Image Container */}
+        <div className="md:w-1/2 flex justify-center relative">
+          <motion.img
+            src="https://res.cloudinary.com/dl3haplj1/image/upload/f_auto,q_auto/v1/ayodeji-kingsley/Website%202/Landing%20page/artist-pic-1"
+            alt="Artist"
+            className="rounded-lg shadow-2xl border-4 border-white w-full max-w-lg transform hover:scale-105 transition-transform duration-500"
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1 }}
+          />
+        </div>
+
+        {/* Text Content */}
+        <motion.div
+          className="md:w-1/2 text-left space-y-6 relative z-10 font-body"
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+        >
+          <motion.div
+            className="space-y-5 dark:text-white "
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-20%" }}
+            variants={{
+              visible: { transition: { staggerChildren: 0.1 } },
+            }}
+          >
+            <motion.p className="font-medium">
+              For the past couple of years, I've been working on a pre-existing
+              art concept, but with a unique lens of expression. I've truly
+              explored and demonstrated the magnificent use of what others
+              perceive as waste, bringing them together in the praxis of fine
+              aesthetics to express familiar ideas and entities like humans,
+              animals, tools, and various other items.
+            </motion.p>
+            <motion.div className="space-y-4">
+              <p>
+                The evolution of humanity and the advancement of science and
+                technology have clearly shown just how useful metals are, and
+                this utility extends to art in all its forms and systems.
+                Although rigid, they can be bent to an artist's will. In the
+                right hands and with the right motives, metals are beautiful and
+                can represent life in a spectacular way when used imaginatively.
+              </p>
+            </motion.div>
+          </motion.div>
+          <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed font-light"></p>
+          <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed font-light"></p>
+        </motion.div>
+      </motion.div>
+
+      {/* about content 2 */}
+      <motion.div className="font-body mx-auto container relative flex flex-col md:flex-row-reverse items-center justify-between px-6 lg:px-[10rem] gap-12 py-16 bg-gradient-to-b from-gray-100 to-white dark:from-gray-900 dark:to-gray-800 dark:!bg-none">
+        <div className="absolute top-0 left-0 w-full h-full opacity-10 bg-[url('https://www.transparenttextures.com/patterns/black-thread-light.png')]" />
+
+        {/* Image Container */}
+        <div className="md:w-1/2 flex justify-center relative">
+          <motion.img
+            src="https://res.cloudinary.com/dl3haplj1/image/upload/f_auto,q_auto/v1/ayodeji-kingsley/Website%202/Landing%20page/landing-bg"
+            alt="Artist"
+            className="rounded- shadow-2xl borde-4 border-whit w-full max-w-lg transform hover:scale-105 transition-transform duration-500"
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1 }}
+            loading="lazy"
+          />
+        </div>
+
+        {/* Text Content */}
+        <motion.div
+          className="md:w-1/2 text-left space-y-6 relative z-10"
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+        >
+          <motion.div
+            className="space-y-5 dark:text-white "
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-20%" }}
+            variants={{
+              visible: { transition: { staggerChildren: 0.1 } },
+            }}
+          >
+            <motion.p className="font-medium">
+              I've developed a strong interest in transforming scrap into
+              incredible, plausible, and almost indispensable ideas for our
+              world today. I've chosen a path that converts static rubbish into
+              static properties of adornments. The ornamental products of my art
+              have helped many people translate their fantasies and illusions
+              into substantial possessions. I am a co-creator in the direct
+              image of the unequalled ultimate creator.
             </motion.p>
           </motion.div>
           <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed font-light"></p>

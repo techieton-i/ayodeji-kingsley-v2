@@ -2,11 +2,12 @@ import { motion } from "framer-motion";
 import logo1 from "@assets/banlogo_YedTigd.width-600.png";
 import logo2 from "@assets/Certified-Carbon-Literate.png";
 import logo3 from "@assets/download.png";
-import logo4 from "@assets/new tak logo4.png";
+import logo4 from "@assets/hhhh.png";
 import twitterIcon from "@assets/twitterx.svg";
 import instaIcon from "@assets/instagram-svgrepo-com.svg";
 import tiktokIcon from "@assets/tiktok-svgrepo-com.svg";
 import mailIcon from "@assets/mail-letter-svgrepo-com.svg";
+import { Link } from "react-router-dom";
 
 const Icon = ({ src, alt }) => <img src={src} alt={alt} className="w-7 h-7" />;
 
@@ -34,9 +35,17 @@ const Footer = () => {
 
         <div className="flex flex-wrap items-center gap-10 text-xl">
           <Icon src={twitterIcon} alt="twitter" />
-          <Icon src={instaIcon} alt="instagram" />
+          <a
+            href="https://www.instagram.com/theayodejikingsley"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Icon src={instaIcon} alt="instagram" />
+          </a>
           <Icon src={tiktokIcon} alt="tiktok" />
-          <Icon src={mailIcon} alt="email" />
+          <Link to="/contact">
+            <Icon src={mailIcon} alt="email" />
+          </Link>
         </div>
       </div>
 

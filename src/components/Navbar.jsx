@@ -166,8 +166,10 @@ const Navbar = () => {
     "Collections",
     "Gallery",
     "TAK",
-    "Biography",
-    "Contact",
+    "Media",
+    "Exhibitions",
+    "About",
+    // "Contact",
   ];
 
   const toggleMenu = () => {
@@ -202,8 +204,8 @@ const Navbar = () => {
             letterSpacing: "1px",
           }}
         >
-          <div className="w-[9rem]">
-            <BrandLogo />
+          <div className="w-[3rem]">
+            <BrandLogo isHomepage={isHomepage} />
           </div>
         </Link>
 

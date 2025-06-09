@@ -1,4 +1,4 @@
-import { Suspense } from "react";
+import { Suspense, useEffect } from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home";
 import Collections from "./Pages/Collections";
@@ -14,6 +14,23 @@ import Residency from "./Pages/Residency";
 import Contact from "./Pages/ContactPage";
 
 function App() {
+  useEffect(() => {
+    if (import.meta.env.VITE_APP_NODE_ENV === "production") {
+      document.body.addEventListener("contextmenu", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+      });
+      return () => {
+        document.body.removeEventListener("contextmenu", (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          return false;
+        });
+      };
+    }
+  }, []);
+
   return (
     <Suspense fallback="...loading">
       <BrowserRouter>
@@ -28,8 +45,8 @@ function App() {
           />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/art/:id" element={<ArtDetail />} />
-          <Route path="/awards" element={<AwardShowcaseScroll />} />
-          <Route path="/biography" element={<Biography />} />
+          <Route path="/media" element={<AwardShowcaseScroll />} />
+          <Route path="/about" element={<Biography />} />
           <Route path="/exhibitions" element={<Exhibitions />} />
           <Route path="/residency" element={<Residency />} />
           <Route path="/contact" element={<Contact />} />

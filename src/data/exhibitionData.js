@@ -122,4 +122,15 @@ export const exhibitionData = [
 //   },
 // ];
 
-export const residencyData = [];
+export const residencyData = [
+  {
+    title: "Upcycling Redefined",
+    text: "September, 2021",
+    images: generateImageUrls("Upcycling Redefined", 12),
+  },
+  {
+    title: "Waste to Wealth",
+    text: "Oghara, Delta State May, 2021",
+    images: generateImageUrls("Youtube Africa day", 10),
+  },
+];

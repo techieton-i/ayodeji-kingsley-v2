@@ -1,10 +1,10 @@
-export const BrandLogo = () => {
+export const BrandLogo = ({ isHomepage }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 3524.86 1212.47"
       fill="currentColor"
-      className="w-auto h-10 text-black dark:text-white"
+      className={`w-auto h-10 text-black ${isHomepage ? "text-white" : "text-black"}`}
     >
       <g id="Layer_2" data-name="Layer 2">
         <g id="Layer_1-2" data-name="Layer 1">

@@ -3,6 +3,34 @@ import { artworks } from "@/data/awardData";
 import { useInView, motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 
+const awardList = [
+  {
+    title: "Arthouse Gallery January Artist of the Month",
+    award: "Sweden 2025",
+  },
+  {
+    title: "Creators/Maker Award (Finalist)",
+    award: "East Midlands Chambers, UK 2025",
+  },
+  {
+    title: "Community Impact Champion Award (Finalist)",
+    award: "East Midlands Chambers, UK 2025",
+  },
+  {
+    title: "Distinction Award",
+    award: "Gallery4% Juried Art Competition, USA 2025",
+  },
+  { title: "Honourable Mention Award", award: "Teravarna, USA 2025" },
+  { title: "Finalist award", award: "Art-Collide Award Competition, UK 2025" },
+  {
+    title: "Award of Excellence, Positive Value Consulting",
+    award: "Nigeria 2023",
+  },
+  {
+    title: "LIMCAF Award Top 25",
+    award: "Enugu, Nigeria 2021",
+  },
+];
 export default function AwardShowcaseScroll() {
   const sectionRefs = useRef([]);
   const containerRef = useRef(null);
@@ -85,6 +113,17 @@ export default function AwardShowcaseScroll() {
           </div>
         );
       })}
+      <div className="h-screen snap-start flex flex-col items-center justify-center bg-white px-6 py-12">
+        <h2 className="text-3xl font-bold mb-4">Awards List</h2>
+        <ul className="max-w-2xl w-full text-gray-700 space-y-4">
+          {awardList.map((art, i) => (
+            <li key={art.title + i} className="border-b pb-2">
+              <span className="font-semibold">{art.title}</span> —{" "}
+              <span className="italic text-gray-500">{art.award}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
 
       {/* Dot Navigation */}
       <div className="fixed right-3 md:right-6 top-1/2 transform -translate-y-1/2 hidden sm:flex flex-col gap-4 z-50">
