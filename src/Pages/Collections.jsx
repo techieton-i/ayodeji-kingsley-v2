@@ -7,7 +7,7 @@ const artworks = [
     title: "Carpe diem",
     key: "CARPIE_DIEM",
     imgUrl:
-      "https://res.cloudinary.com/dl3haplj1/image/upload/w_700/f_webp/q_auto/v1/ayodeji-kingsley/Selected/Collections/Carpe%20Diem/Rat%20Race/2dff9fe73e4546b8ece37981f9d8f1ed",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/f_auto,q_auto/v1/ayodeji-kingsley/Selected/Collections/Carpe%20Diem/Divergent%20R-attitude/3d2bca9b86b9dd10813c3452a8de9f0c",
   },
   {
     id: 2,
@@ -42,7 +42,7 @@ const artworks = [
     title: "Symbol of hope",
     key: "SYMBOL_OF_HOPE",
     imgUrl:
-      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low,w_700/v1/ayodeji-kingsley/Selected/Collections/Symbol%20of%20Hope/Dash%20of%20hope/3bed97e3fc5c85967f718d26d8850c89",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/f_auto,q_auto/v1/ayodeji-kingsley/Selected/Collections/Symbol%20of%20Hope/Dash%20of%20hope/Dash%20of%20Hope%201",
   },
 ];
 

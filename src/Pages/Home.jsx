@@ -94,14 +94,14 @@ const AboutSection = () => {
       {/* Background Artistic Elements */}
       <div className="absolute top-0 left-0 w-full h-full opacity-10 bg-[url('https://www.transparenttextures.com/patterns/black-thread-light.png')]" />
 
-      <motion.h2
+      {/* <motion.h2
         className="relative text-3xl font-semibold text-gray-900 dark:text-gray-100 mb-5"
         initial={{ y: -20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.3 }}
       >
         About the Artist
-      </motion.h2>
+      </motion.h2> */}
 
       {/* about content 1 */}
       <motion.div className="mx-auto container relative flex flex-col md:flex-row items-center justify-between px-6 lg:px-[10rem] gap-12 py-16 bg-gradient-to-b from-gray-100 to-white dark:from-gray-900 dark:to-gray-800 dark:!bg-none">

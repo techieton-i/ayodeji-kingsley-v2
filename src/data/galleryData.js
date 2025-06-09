@@ -81,8 +81,8 @@ Harry Potter as a film series is based on the eponymous novels by J. K Rowling, 
     id: 6,
     title: "Hoof hearted",
     images: [
-      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low/v1/ayodeji-kingsley/Selected/Gallery/Hoof%20hearted/Hoof%20hearted",
       "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low/v1/ayodeji-kingsley/Selected/Gallery/Hoof%20hearted/Hoof%20hearted2",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low/v1/ayodeji-kingsley/Selected/Gallery/Hoof%20hearted/Hoof%20hearted",
       "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low/v1/ayodeji-kingsley/Selected/Gallery/Hoof%20hearted/Hoof%20hearted3",
     ],
     description: `The adage "You can lead a horse to water, but you can't make him drink" encapsulates a fundamental truth about the interplay between guidance and autonomy.
