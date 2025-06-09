@@ -88,7 +88,9 @@ const ImageGrid = ({ images }) => {
 
   return (
     <>
-      <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 p-4">
+      <div
+        className={`columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 p-4 ${modalData?.show ? "pointer-events-none blur-sm" : ""}`}
+      >
         {images?.map((image, index) => (
           <LazyLoadImage
             key={index}

@@ -45,7 +45,6 @@ const HeroSection = () => {
 
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/100 to-transparen"></div>
 
-      {/* Content */}
       <motion.div
         className="relative z-10 max-w-2xl mx-auto text-white px-4"
         initial={{ opacity: 0, y: -20 }}

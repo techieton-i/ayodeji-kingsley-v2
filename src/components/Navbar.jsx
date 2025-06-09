@@ -2,6 +2,10 @@ import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Link, NavLink, useLocation } from "react-router-dom";
+import Logo from "@assets/ayodejiKingsley-1.svg";
+// import Logo from "@assets/new tak logo.png";
+// import Logo from "@assets/new tak logo2.png"; //out
+// import Logo from "@assets/new tak logo4.png";
 
 // Animation components
 const Path = (props) => (
@@ -204,9 +208,16 @@ const Navbar = () => {
             letterSpacing: "1px",
           }}
         >
-          <span className={isHomepage ? "text-white-400" : "text-rust-600"}>
+          <div className="w-[3rem] h-10">
+            <img
+              src={Logo}
+              alt="ayodeji-kingsley-logo"
+              className="w-full h-auto transition-transform duration-300 hover:scale-105"
+            />
+          </div>
+          {/* <span className={isHomepage ? "text-white-400" : "text-rust-600"}>
             AYODEJI KINGSLEY
-          </span>
+          </span> */}
         </Link>
 
         {/* Desktop Navigation - Improved Contrast */}
