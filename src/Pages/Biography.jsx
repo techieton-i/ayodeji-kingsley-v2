@@ -91,7 +91,7 @@ export default function Biography() {
           >
             <Header title="About the Artist" />
             <div className="grid md:grid-cols-1 gap-8 items-center">
-              <p className="text-xs sm:text-lg leading-relaxed text-[#111827] dark:text-gray-300 text-justify">
+              <p className="text-xs sm:text-lg leading-relaxe text-[#111827] dark:text-gray-300 md:text-justify font-body">
                 Ayodeji Kingsley is a Nigerian-born artist based in Derby,
                 United Kingdom who predominantly works with metal in his
                 sculptures. Ayodeji has a bachelor's degree in chemical
@@ -153,7 +153,7 @@ export default function Biography() {
           >
             <Header title="Personal Statement" />
             <div className="bg-[#1f2937] p-2 sm:p-6 rounded-xl border border-gray-700">
-              <blockquote className="italic text-sm sm:text-lg text-gray-300 text-justif">
+              <blockquote className="italic text-sm sm:text-lg text-gray-300 text-justif font-body">
                 My sculptures invite the viewer to explore the depths of the
                 human psyche. I aim to evoke a sense of wonder and
                 introspection, inviting viewers to connect with their

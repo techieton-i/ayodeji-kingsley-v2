@@ -145,11 +145,9 @@ const Navbar = () => {
   const location = useLocation();
   const isHomepage = location.pathname === "/";
 
-  const textColorClass = isHomepage ? "text-white" : "text-metal-900";
   const hoverTextColorClass = isHomepage
     ? "hover:text-rust-300"
     : "hover:text-rust-500";
-  const borderColorClass = isHomepage ? "border-rust-400" : "border-rust-500";
 
   useFocusTrap(isOpen, menuRef, toggleButtonRef);
 
@@ -169,7 +167,6 @@ const Navbar = () => {
     "Media",
     "Exhibitions",
     "About",
-    // "Contact",
   ];
 
   const toggleMenu = () => {
@@ -228,23 +225,6 @@ const Navbar = () => {
             </NavLink>
           ))}
         </div>
-
-        {/* Mobile Navigation Toggle - More Visible */}
-        {/* <div className="md:hidden">
-          <button
-            ref={toggleButtonRef}
-            onClick={toggleMenu}
-            aria-expanded={isOpen}
-            aria-label={isOpen ? "Close menu" : "Open menu"}
-            className="text-white hover:text-rust-300 transition-colors p-2 bg-metal-700 rounded-md"
-          >
-            {isOpen ? (
-              <X size={28} strokeWidth={2.5} />
-            ) : (
-              <Menu size={28} strokeWidth={2.5} />
-            )}
-          </button>
-        </div> */}
       </div>
 
       <motion.div
