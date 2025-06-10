@@ -57,6 +57,7 @@ export default function AwardShowcaseScroll() {
 
   return (
     <div
+      id="scroll-container"
       ref={containerRef}
       className="relative h-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth scroll-hide"
     >
