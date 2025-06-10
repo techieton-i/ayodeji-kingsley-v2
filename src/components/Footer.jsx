@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import logo1 from "@assets/banlogo_YedTigd.width-600.png";
-import logo2 from "@assets/Certified-Carbon-Literate.png";
+// import logo2 from "@assets/Certified-Carbon-Literate.png";
 import logo3 from "@assets/download.png";
 import logo4 from "@assets/hhhh.png";
 import twitterIcon from "@assets/twitterx.svg";
@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 
 const Icon = ({ src, alt }) => <img src={src} alt={alt} className="w-7 h-7" />;
 
-const logos = [logo1, logo2, logo3, logo4];
+const logos = [logo1, logo3, logo4];
 
 const Footer = () => {
   return (
