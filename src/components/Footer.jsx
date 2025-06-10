@@ -52,7 +52,14 @@ const Footer = () => {
       <motion.button
         whileHover={{ y: -3 }}
         className="fixed bottom-6 right-6 bg-neutral-800 p-2 rounded-md shadow-lg text-white hover:bg-neutral-700 transition"
-        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        onClick={() => {
+          const scrollContainer = document.querySelector("#scroll-container");
+          if (scrollContainer) {
+            scrollContainer.scrollTo({ top: 0, behavior: "smooth" });
+          } else {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }
+        }}
       >
         <span className="text-lg">↑</span>
       </motion.button>

@@ -12,6 +12,7 @@ import Footer from "./components/Footer";
 import Exhibitions from "./Pages/Exhibitions";
 import Residency from "./Pages/Residency";
 import Contact from "./Pages/ContactPage";
+import ScrollToTop from "./utils/scrollToTop";
 
 function App() {
   useEffect(() => {
@@ -35,6 +36,7 @@ function App() {
     <Suspense fallback="...loading">
       <BrowserRouter>
         <Navbar />
+        <ScrollToTop />
         <Routes>
           <Route index element={<Home />} />
           <Route path="/home" element={<Navigate to="/" replace />} />
