@@ -12,12 +12,12 @@ export default async function handler(req, res) {
     secure: true,
     auth: {
       user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASS, // Gmail app password
+      pass: process.env.EMAIL_PASS,
     },
   });
 
   const mailOptions = {
-    from: email,
+    from: process.env.EMAIL_USER,
     to: process.env.CONTACT_RECEIVER,
     subject: `New message from ${name}`,
     html: `
@@ -37,6 +37,7 @@ export default async function handler(req, res) {
     await transporter.sendMail(mailOptions);
     return res.status(200).json({ success: true, message: "Email sent!" });
   } catch (error) {
+    console.error("Error sending email:", error);
     return res.status(500).json({ success: false, error: error.message });
   }
 }

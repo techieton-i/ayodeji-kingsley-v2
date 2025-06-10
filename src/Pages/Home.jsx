@@ -53,7 +53,7 @@ const HeroSection = () => {
         </h1>
 
         <p className="text-lg sm:text-xl text-gray-200 mb-8 max-w-xl mx-auto">
-          A passionate visual artist crafting modern, metal and scrap arts
+          A visual artist and environmental enthusiast
         </p>
 
         <motion.div

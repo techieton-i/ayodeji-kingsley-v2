@@ -97,7 +97,13 @@ export default function AwardShowcaseScroll() {
               />
               <div className="text-left max-w-md">
                 <h2 className="text-3xl font-bold mb-2">{art.title}</h2>
-                <p className="text-sm text-gray-500 italic mb-4">{art.award}</p>
+                <a
+                  href={art.link}
+                  target="_blank"
+                  className="text-sm text-gray-500 italic mb-4 hover:text-rust-600 transition"
+                >
+                  {art.award}
+                </a>
                 <p className="text-gray-700 leading-relaxed">
                   {art.description}
                 </p>
