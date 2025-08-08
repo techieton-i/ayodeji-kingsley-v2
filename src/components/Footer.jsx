@@ -3,6 +3,7 @@ import logo1 from "@assets/banlogo_YedTigd.width-600.png";
 import logo2 from "@assets/Certified-Carbon-Literate.png";
 import logo3 from "@assets/download.png";
 import logo4 from "@assets/hhhh.png";
+import logo5 from "@assets/eco.png";
 import twitterIcon from "@assets/twitterx.svg";
 import instaIcon from "@assets/instagram-svgrepo-com.svg";
 import tiktokIcon from "@assets/tiktok-svgrepo-com.svg";
@@ -11,7 +12,7 @@ import { Link } from "react-router-dom";
 
 const Icon = ({ src, alt }) => <img src={src} alt={alt} className="w-7 h-7" />;
 
-const logos = [logo1, logo2, logo3, logo4];
+const logos = [logo1, logo2, logo3, logo4, logo5];
 
 const Footer = () => {
   return (
