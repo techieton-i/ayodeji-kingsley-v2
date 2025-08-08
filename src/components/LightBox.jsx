@@ -128,7 +128,7 @@ export function ArtModal({ isOpen, imageSrc, title, description, onClose }) {
 
             {/* Text Content */}
             {(title || description) && (
-              <div className="w-full md:w-1/2 overflow-y-auto p-4">
+              <div className="w-full md:w-1/2 overflow-y-auto max-h-[50vh] p-4">
                 {title && (
                   <h2 className="text-lg font-semibold mb-2">{title}</h2>
                 )}

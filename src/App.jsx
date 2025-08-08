@@ -12,6 +12,7 @@ import Exhibitions from "./Pages/Exhibitions";
 import Residency from "./Pages/Residency";
 import Contact from "./Pages/ContactPage";
 import ScrollToTop from "./utils/scrollToTop";
+import ComingSoon from "./Pages/ComingSoon";
 
 function App() {
   useEffect(() => {
@@ -50,6 +51,7 @@ function App() {
           <Route path="/exhibitions" element={<Exhibitions />} />
           <Route path="/residency" element={<Residency />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/*" element={<ComingSoon />} />
         </Routes>
         <Footer />
       </BrowserRouter>

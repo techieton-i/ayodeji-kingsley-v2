@@ -181,7 +181,7 @@ const ArtGallerySlider = ({ images }) => {
               <button
                 key={index}
                 onClick={() => handleDotClick(index)}
-                className={`w-2.5 h-2.5 transition-all duration-300 ${
+                className={`w-2.5 h-2.5 transition-all duration-300 rounded-full ${
                   index === currentIndex
                     ? "bg-white scale-125"
                     : "bg-white/40 hover:bg-white/60"
@@ -279,7 +279,7 @@ const ArtGallerySlider = ({ images }) => {
                       e.stopPropagation();
                       handleDotClick(index);
                     }}
-                    className={`w-3 h-3 transition-all duration-300 ${
+                    className={`w-3 h-3 transition-all duration-300 rounded-full  ${
                       index === currentIndex
                         ? "bg-white scale-125"
                         : "bg-white/30 hover:bg-white/60"

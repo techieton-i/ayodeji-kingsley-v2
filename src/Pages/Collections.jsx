@@ -7,14 +7,14 @@ const artworks = [
     title: "Carpe diem",
     key: "CARPIE_DIEM",
     imgUrl:
-      "https://res.cloudinary.com/dl3haplj1/image/upload/f_auto,q_auto/v1/ayodeji-kingsley/Selected/Collections/Carpe%20Diem/Divergent%20R-attitude/3d2bca9b86b9dd10813c3452a8de9f0c",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/f_auto,q_auto:low,w_700/v1754977891/ayodeji-kingsley/Selected/Collections/Carpe%20Diem/Mousequerade/Div_Path_bsjrpg.jpg",
   },
   {
     id: 2,
     title: "Illusion of Control",
     key: "ILLUSION_OF_CONTROL",
     imgUrl:
-      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto/v1/ayodeji-kingsley/Selected/Collections/Illusion%20of%20Control/Pouched%20in%20Inequity/93f445cf9f23939465b4ae1e8934459f",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto,w_700/v1/ayodeji-kingsley/Selected/Collections/Illusion%20of%20Control/Pouched%20in%20Inequity/93f445cf9f23939465b4ae1e8934459f",
   },
   {
     id: 3,
@@ -42,7 +42,7 @@ const artworks = [
     title: "Symbol of hope",
     key: "SYMBOL_OF_HOPE",
     imgUrl:
-      "https://res.cloudinary.com/dl3haplj1/image/upload/f_auto,q_auto/v1/ayodeji-kingsley/Selected/Collections/Symbol%20of%20Hope/Dash%20of%20hope/Dash%20of%20Hope%201",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/f_auto,q_auto,w_700/v1/ayodeji-kingsley/Selected/Collections/Symbol%20of%20Hope/Dash%20of%20hope/Dash%20of%20Hope%201",
   },
 ];
 

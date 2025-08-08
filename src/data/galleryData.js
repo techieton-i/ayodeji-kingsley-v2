@@ -3,8 +3,8 @@ export const galleryData = [
     id: 1,
     title: "Bait and Switch",
     images: [
-      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low/v1/ayodeji-kingsley/Selected/Gallery/Bait%20and%20Switch/bait%20and%20switch",
-      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low/v1/ayodeji-kingsley/Selected/Gallery/Bait%20and%20Switch/bait%20and%20switch%202",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low,w_720/v1/ayodeji-kingsley/Selected/Gallery/Bait%20and%20Switch/bait%20and%20switch",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low,w_720/v1/ayodeji-kingsley/Selected/Gallery/Bait%20and%20Switch/bait%20and%20switch%202",
     ],
     year: "2019",
     medium: "Metal scrap",
@@ -14,10 +14,10 @@ export const galleryData = [
     id: 2,
     title: "Courage the Cowardly Dog",
     images: [
-      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low/v1/ayodeji-kingsley/Selected/Gallery/Courage%20the%20Cowardly%20Dog/courage%201",
-      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low/v1/ayodeji-kingsley/Selected/Gallery/Courage%20the%20Cowardly%20Dog/courage%202",
-      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low/v1/ayodeji-kingsley/Selected/Gallery/Courage%20the%20Cowardly%20Dog/courage%203",
-      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low/v1/ayodeji-kingsley/Selected/Gallery/Courage%20the%20Cowardly%20Dog/courage%204",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low,w_720/v1/ayodeji-kingsley/Selected/Gallery/Courage%20the%20Cowardly%20Dog/courage%201",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low,w_720/v1/ayodeji-kingsley/Selected/Gallery/Courage%20the%20Cowardly%20Dog/courage%202",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low,w_720/v1/ayodeji-kingsley/Selected/Gallery/Courage%20the%20Cowardly%20Dog/courage%203",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low,w_720/v1/ayodeji-kingsley/Selected/Gallery/Courage%20the%20Cowardly%20Dog/courage%204",
     ],
     description: `Every artist has a genesis, a point of departure where inspiration ignites and a journey begins. For me, that pivotal moment arrived with a sculpture of "Courage, the Cowardly Dog." More than just a representation of a beloved cartoon character, this piece marked my bold transition into sculpting and, more specifically, the genesis of my story as a scrap metal sculptor.
 Before "Courage," my artistic explorations had been confined to more traditional mediums. But a fascination with the raw beauty and potential of discarded metal began to stir within me. The idea of transforming these often-overlooked materials into something beautiful and expressive was incredibly compelling. 
@@ -37,7 +37,7 @@ This particular sculpture was more than just an artistic endeavor; it was an act
     id: 3,
     title: "Eclipse (Self-Realisation)",
     images: [
-      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low/v1/ayodeji-kingsley/Selected/Gallery/Eclipse/Eclipse",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low,w_720/v1/ayodeji-kingsley/Selected/Gallery/Eclipse/Eclipse",
     ],
     description: `The Universe Eclipse is a celestial spectacle in which cosmic bodies align, creating a stunning display of shadows and lights. Light and shadows are not only vital elements of art, but they also reflect the opposing forces and dualities that exist in different facets of life, from the physical to the emotional, psychological, and spiritual realms. The interplay of shadow and light metaphorically portrays the intricacies of the human experience. Shadows reflect the unknown and hidden elements of ourselves as well as the difficulties we face. They can represent our anxieties, uncertainties, and insecurities. Light, on the other hand, symbolises clarity, illumination, and the search of truth and understanding. It represents our abilities, desires, and the route to self-realization. Be intentional about your goals and decisions. Don’t let darkness overwhelm your soul. You Sun is gon SHINE.`,
     year: "2022",
@@ -48,8 +48,8 @@ This particular sculpture was more than just an artistic endeavor; it was an act
     id: 4,
     title: "Eleyinjuege",
     images: [
-      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low/v1/ayodeji-kingsley/Selected/Gallery/Eleyinjuege/Eleyinjuege",
-      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low/v1/ayodeji-kingsley/Selected/Gallery/Eleyinjuege/Eleyinjuege2",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low,w_720/v1/ayodeji-kingsley/Selected/Gallery/Eleyinjuege/Eleyinjuege",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low,w_720/v1/ayodeji-kingsley/Selected/Gallery/Eleyinjuege/Eleyinjuege2",
     ],
     description: `This sculpture, forged from a deep, warm bronze, captures the essence of a woman both powerful and serene. Her gaze, rendered with meticulous detail, reflects the Yoruba phrase, "Eleyinju ege" – "Eyes of the fragile one." Yet, this fragility is not weakness, but a delicate strength, a resilience honed through generations. Her eyes hold the weight of untold stories, the quiet wisdom of a community's cornerstone.  The subject's gaze, speaks volumes, conveying both delicate beauty and an unyielding inner fire. These are eyes that have witnessed the complexities of life, yet retain a spark of hope and determination.
 
@@ -67,7 +67,7 @@ The sculpture's overall posture is one of quiet dignity and unwavering strength.
     id: 5,
     title: "Hare Potter",
     images: [
-      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low/v1/ayodeji-kingsley/Selected/Gallery/Hare%20Potter/Hare%20potter",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low,w_720/v1/ayodeji-kingsley/Selected/Gallery/Hare%20Potter/Hare%20potter",
     ],
     description: `“Besides, the world isn’t split into good people and Death Eaters. We’ve all got both light and dark inside us. What matters is the part we choose to act on. That’s who we really are.”
 -Harry Potter and the Prisoner of Azkaban
@@ -81,9 +81,9 @@ Harry Potter as a film series is based on the eponymous novels by J. K Rowling, 
     id: 6,
     title: "Hoof hearted",
     images: [
-      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low/v1/ayodeji-kingsley/Selected/Gallery/Hoof%20hearted/Hoof%20hearted3",
-      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low/v1/ayodeji-kingsley/Selected/Gallery/Hoof%20hearted/Hoof%20hearted2",
-      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low/v1/ayodeji-kingsley/Selected/Gallery/Hoof%20hearted/Hoof%20hearted",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low,w_720/v1/ayodeji-kingsley/Selected/Gallery/Hoof%20hearted/Hoof%20hearted3",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low,w_720/v1/ayodeji-kingsley/Selected/Gallery/Hoof%20hearted/Hoof%20hearted2",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low,w_720/v1/ayodeji-kingsley/Selected/Gallery/Hoof%20hearted/Hoof%20hearted",
     ],
     description: `The adage "You can lead a horse to water, but you can't make him drink" encapsulates a fundamental truth about the interplay between guidance and autonomy.
 
@@ -101,8 +101,8 @@ The exercise of free will is a fundamental human right. Respecting an individual
     id: 7,
     title: "Hum-dinger",
     images: [
-      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low/v1/ayodeji-kingsley/Selected/Gallery/Hum-dinger/Hum-dinger",
-      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low/v1/ayodeji-kingsley/Selected/Gallery/Hum-dinger/Hum-dinger%202",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low,w_720/v1/ayodeji-kingsley/Selected/Gallery/Hum-dinger/Hum-dinger",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low,w_720/v1/ayodeji-kingsley/Selected/Gallery/Hum-dinger/Hum-dinger%202",
     ],
     description: `The sculpture "Hum-dinger" encapsulates the essence of finding joy in life's simple pleasures. The hummingbird, a creature often associated with lightness and grace, is depicted in a dynamic pose, its wings outstretched as if poised for flight. The intricate details of its iridescent feathers and delicate form convey a sense of vibrancy and vitality.
 The title, "Hum-dinger," playfully alludes to the hummingbird's rapid wingbeats and its ability to hover effortlessly. It also serves as a metaphorical reminder to embrace life's "hum-dingers," those unexpected moments of joy and wonder that often lie in the small, everyday details.
@@ -116,10 +116,10 @@ The sculpture invites viewers to reflect on the importance of cultivating a spir
     id: 8,
     title: "Hypnotic Stare",
     images: [
-      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low/v1/ayodeji-kingsley/Selected/Gallery/Hypnotic%20Stare/Hypnotic%20Stare",
-      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low/v1/ayodeji-kingsley/Selected/Gallery/Hypnotic%20Stare/Hypnotic%20Stare2",
-      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low/v1/ayodeji-kingsley/Selected/Gallery/Hypnotic%20Stare/Hypnotic%20Stare3",
-      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low/v1/ayodeji-kingsley/Selected/Gallery/Hypnotic%20Stare/Hypnotic%20Stare4",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low,w_720/v1/ayodeji-kingsley/Selected/Gallery/Hypnotic%20Stare/Hypnotic%20Stare",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low,w_720/v1/ayodeji-kingsley/Selected/Gallery/Hypnotic%20Stare/Hypnotic%20Stare2",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low,w_720/v1/ayodeji-kingsley/Selected/Gallery/Hypnotic%20Stare/Hypnotic%20Stare3",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low,w_720/v1/ayodeji-kingsley/Selected/Gallery/Hypnotic%20Stare/Hypnotic%20Stare4",
     ],
     description: `Hypnosis is frequently misconstrued as a process whereby individuals are coerced into actions against their volition. In actuality, it facilitates an enhanced awareness of self-regulation and cognitive control. Hypnosis involves a state of heightened suggestibility, wherein the critical faculty of the conscious mind is temporarily attenuated, allowing for increased access to the subconscious. This process is analogous to the receptive learning observed in children and the persuasive influence of advertising, which subtly implants suggestions leading to perceived needs.
 The perception of pain, for instance, is significantly modulated by psychological factors, demonstrating the profound influence of the mind on physiological experience. This principle is illustrated in the art piece 'Hypnotic Stare,' which depicts an individual in a state of internal conflict and distress, discernible through subtle ocular cues. This portrayal underscores the subjective nature of pain, which can be amplified or diminished by cognitive processes.
@@ -132,13 +132,13 @@ From a therapeutic standpoint, the heightened suggestibility induced by hypnosis
     id: 9,
     title: "IMMIGR-ANT",
     images: [
-      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low/v1/ayodeji-kingsley/Selected/Gallery/immmigrants/9a03aa5e6802966bbdbd596d3a75c1d1",
-      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low/v1/ayodeji-kingsley/Selected/Gallery/immmigrants/ca3a96e64d11751e81a756c10f07ea15",
-      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low/v1/ayodeji-kingsley/Selected/Gallery/immmigrants/9da595299ecc95c3ce4073dd008e40ad",
-      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low/v1/ayodeji-kingsley/Selected/Gallery/immmigrants/b04c486b9918f792aa09447e85bfffd9",
-      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low/v1/ayodeji-kingsley/Selected/Gallery/immmigrants/262572222f7486e1586095717bd9100c",
-      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low/v1/ayodeji-kingsley/Selected/Gallery/immmigrants/dc9a1651cd573bbc1ddd88cbfa3e60d6",
-      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low/v1/ayodeji-kingsley/Selected/Gallery/immmigrants/61cc5c1f95756b0ff079616e104f9351",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low,w_720/v1/ayodeji-kingsley/Selected/Gallery/immmigrants/9a03aa5e6802966bbdbd596d3a75c1d1",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low,w_720/v1/ayodeji-kingsley/Selected/Gallery/immmigrants/ca3a96e64d11751e81a756c10f07ea15",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low,w_720/v1/ayodeji-kingsley/Selected/Gallery/immmigrants/9da595299ecc95c3ce4073dd008e40ad",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low,w_720/v1/ayodeji-kingsley/Selected/Gallery/immmigrants/b04c486b9918f792aa09447e85bfffd9",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low,w_720/v1/ayodeji-kingsley/Selected/Gallery/immmigrants/262572222f7486e1586095717bd9100c",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low,w_720/v1/ayodeji-kingsley/Selected/Gallery/immmigrants/dc9a1651cd573bbc1ddd88cbfa3e60d6",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low,w_720/v1/ayodeji-kingsley/Selected/Gallery/immmigrants/61cc5c1f95756b0ff079616e104f9351",
     ],
     description: `Immigration, Intrinsic Fragment of Ecology or Medium for Prejudice?
 
@@ -165,8 +165,8 @@ The image powerfully illustrates the universality of the immigrant experience, c
     id: 10,
     title: "Loa-Fin",
     images: [
-      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low/v1/ayodeji-kingsley/Selected/Gallery/Loa-Fin/Loa-Fin",
-      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low/v1/ayodeji-kingsley/Selected/Gallery/Loa-Fin/Loa-Fin%202",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low,w_720/v1/ayodeji-kingsley/Selected/Gallery/Loa-Fin/Loa-Fin",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low,w_720/v1/ayodeji-kingsley/Selected/Gallery/Loa-Fin/Loa-Fin%202",
     ],
     description: `Loa-fin: A sculptural exploration of stagnation.
 
@@ -180,9 +180,9 @@ A sculptural exploration of kinetic potential, this piece captures the ephemeral
     id: 11,
     title: "Poultry in Motion",
     images: [
-      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low/v1/ayodeji-kingsley/Selected/Gallery/Poultry%20in%20Motion./Poultry%20in%20Motion",
-      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low/v1/ayodeji-kingsley/Selected/Gallery/Poultry%20in%20Motion./Poultry%20in%20Motion%202",
-      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low/v1/ayodeji-kingsley/Selected/Gallery/Poultry%20in%20Motion./Poultry%20in%20Motion%203",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low,w_720/v1/ayodeji-kingsley/Selected/Gallery/Poultry%20in%20Motion./Poultry%20in%20Motion",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low,w_720/v1/ayodeji-kingsley/Selected/Gallery/Poultry%20in%20Motion./Poultry%20in%20Motion%202",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low,w_720/v1/ayodeji-kingsley/Selected/Gallery/Poultry%20in%20Motion./Poultry%20in%20Motion%203",
     ],
     description: `"Poultry in Motion" is an adaptive poem derived from the well-known Yoruba proverb: “Adiye ye ogun, Opa Ogun, Adiye ye ogon opa ogbon, Aiye ni adiye opa omo ire, Aiye gbe adiye ta, won ra Awo, Awo ye meji, Opa kan soso.” This proverb translates to: "Hen lays 20 eggs and hatches the 20 chicks, Hen lays 30 eggs and hatches 30 chicks, People of the world clamoured mother hen isn't a good mother enough, they sold the hen in response to the clamour and bought guinea fowl instead, Guinea fowl lays two eggs and hatches only one."
 The folklore serves as a metaphorical exploration of appreciation and the importance of recognizing the value of individuals and resources before their loss. It emphasizes the critical role of mothers and the need to value contributions and opportunities that are often taken for granted.
@@ -237,9 +237,9 @@ The work challenges the notion that individuals are inherently more deserving or
 `,
     year: "2020",
     images: [
-      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low/v1/ayodeji-kingsley/Selected/Gallery/Quailified/quail",
-      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low/v1/ayodeji-kingsley/Selected/Gallery/Quailified/quail2",
-      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low/v1/ayodeji-kingsley/Selected/Gallery/Quailified/quail3",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low,w_720/v1/ayodeji-kingsley/Selected/Gallery/Quailified/quail",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low,w_720/v1/ayodeji-kingsley/Selected/Gallery/Quailified/quail2",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low,w_720/v1/ayodeji-kingsley/Selected/Gallery/Quailified/quail3",
     ],
     medium: "Metal scrap",
     dimensions: "Dimensions - 13 x 12 x 20 inches",
@@ -248,9 +248,9 @@ The work challenges the notion that individuals are inherently more deserving or
     id: 13,
     title: "Sanctuary",
     images: [
-      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low/v1/ayodeji-kingsley/Selected/Gallery/Sanctuary/sanctuary",
-      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low/v1/ayodeji-kingsley/Selected/Gallery/Sanctuary/sanctuary%202",
-      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low/v1/ayodeji-kingsley/Selected/Gallery/Sanctuary/sanctuary%203",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low,w_720/v1/ayodeji-kingsley/Selected/Gallery/Sanctuary/sanctuary",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low,w_720/v1/ayodeji-kingsley/Selected/Gallery/Sanctuary/sanctuary%202",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low,w_720/v1/ayodeji-kingsley/Selected/Gallery/Sanctuary/sanctuary%203",
     ],
     description: `The concept of "home" is often intertwined with images of a physical dwelling – a place of shelter, comfort, and familiarity. Yet, as our world undergoes rapid transformations and traditional notions of stability are challenged, it's crucial to re-examine what truly constitutes "home." Increasingly, the idea of home transcends bricks and mortar, shifting towards a more profound understanding: home is not merely a place, but a feeling, a connection forged with the people who stand by us through thick and thin.   
 
@@ -275,9 +275,9 @@ As the world around us continues to evolve, it's essential to cultivate and cher
     id: 14,
     title: "Simba",
     images: [
-      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low/v1/ayodeji-kingsley/Selected/Gallery/Simba/Simba%201",
-      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low/v1/ayodeji-kingsley/Selected/Gallery/Simba/Simba%202",
-      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low/v1/ayodeji-kingsley/Selected/Gallery/Simba/Simba%203",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low,w_720/v1/ayodeji-kingsley/Selected/Gallery/Simba/Simba%201",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low,w_720/v1/ayodeji-kingsley/Selected/Gallery/Simba/Simba%202",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low,w_720/v1/ayodeji-kingsley/Selected/Gallery/Simba/Simba%203",
     ],
     description: `In a world often dominated by the clamor of the crowd, the leopard's solitary existence offers a poignant metaphor for the human experience. Like the solitary hunter, we often find ourselves navigating life's challenges alone, facing our fears and doubts in the quietude of our own minds. Yet, it is precisely in these moments of solitude that we discover our true strength and potential. The leopard, despite its solitary nature, is a symbol of resilience and adaptability.  It thrives in the harshest of environments, overcoming obstacles and securing its survival. Similarly, we can learn to embrace our individuality and find strength in our unique abilities.
 As we journey through life, we may encounter setbacks and disappointments. But like the leopard, we can choose to persevere, to learn from our mistakes, and to emerge stronger than before. By embracing our solitude, we can tap into a wellspring of creativity, innovation, and personal growth.
@@ -298,7 +298,7 @@ Simba overcame his problems, and we, too, can find strength and motivation in th
     id: 15,
     title: "Spot-aneous Thoughts",
     images: [
-      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low/v1/ayodeji-kingsley/Selected/Gallery/Spot-aneous%20Thoughts/Spot-aneous%20Thoughts",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low,w_720/v1/ayodeji-kingsley/Selected/Gallery/Spot-aneous%20Thoughts/Spot-aneous%20Thoughts",
     ],
     description: `Spot-aneous Thoughts : Seven Spots and Cognitive patterns
 
@@ -314,7 +314,7 @@ Ultimately, this sculpture functions as a meditation on the epistemological limi
     id: 16,
     title: "Voice Of the Voiceless (Sorosoke)",
     images: [
-      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low/v1/ayodeji-kingsley/Selected/Gallery/Voice%20of%20Voiceless/Voice%20of%20Voiceless",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low,w_720/v1/ayodeji-kingsley/Selected/Gallery/Voice%20of%20Voiceless/Voice%20of%20Voiceless",
     ],
     description: `A successful or fufilled man is not a man with immense wealth or influence but a man with ability to make difference to his immediate environment with the platform he has. Be the light in someone's dark world,be the reason someone smiles today,have courage to stand up and speak up for those left out and left behind. Be kind to someone today, speak up for the less privilege even when its not convenient. 
 This piece is dedicated to souls lost to the #endsars Struggle..6 months today and the memories are still fresh in our heads.RIP to the beautiful souls we lost. Amandla awethu.
@@ -330,12 +330,21 @@ This piece is dedicated to souls lost to the #endsars Struggle..6 months today a
     medium: "Metal Scrap",
     dimensions: "28 x 10 x 29 inches",
     images: [
-      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low/v1/ayodeji-kingsley/Selected/Gallery/WHIP-IT/Whip%20IT%201",
-      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low/v1/ayodeji-kingsley/Selected/Gallery/WHIP-IT/Whip%20IT%202",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low,w_720/v1/ayodeji-kingsley/Selected/Gallery/WHIP-IT/Whip%20IT%201",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low,w_720/v1/ayodeji-kingsley/Selected/Gallery/WHIP-IT/Whip%20IT%202",
     ],
     description: `This sculpture, is a figurative representation of the Whippet breed, recontextualized through a contemporary lens informed by the cultural phenomenon of Devo's 1980 hit, "Whip It." The work draws inspiration from the popular adaptation, "When a problem comes along, you must Whippet," which playfully substitutes the original lyric with the breed's name. This linguistic alteration serves as a conceptual framework for the piece, emphasizing the Whippet's inherent attributes of speed, agility, and grace as a metaphor for efficient and decisive problem-solving. The sculpture aims to transcend a mere representational depiction of the animal, instead focusing on the distillation of its essential characteristics into a dynamic and evocative form. By capturing the Whippet's lean physique and emphasizing the long, flowing lines that contribute to its aerodynamic efficiency, the work seeks to convey a sense of kinetic energy frozen in time. Furthermore, the sculpture addresses the duality inherent in the Whippet's nature. Known for their gentle temperament and introspective gaze, they are also capable of explosive bursts of speed, a testament to their racing heritage. This dichotomy is explored through the juxtaposition of relaxed tail movement, heightened attention and preparedness depicted by the ear movement.
 The conceptual underpinnings of the work are further enriched by the reference to Devo's "Whip It," which serves as a metaphor for proactive engagement with challenges. The Whippet, in its ability to navigate its environment with effortless grace and speed, embodies this philosophy. This connection is not merely a superficial appropriation of pop culture; rather, it serves as a catalyst for exploring broader themes of resilience, efficiency, and the harmonious integration of form and function.
 Ultimately, this sculpture seeks to evoke an emotional response in the viewer, inviting them to contemplate the interplay between physical form, implied movement, and conceptual meaning. It is intended as a celebration of the Whippet's inherent beauty and a reflection on the enduring relevance of its attributes in a contemporary context.
 `,
   },
+  //   {
+  //   "title": "DIVERGENT R-ATTITUDES",
+
+  //   "images": [
+  //     "https://res.cloudinary.com/dl3haplj1/image/upload/f_auto,q_auto/v1/ayodeji-kingsley/Selected/Collections/Carpe%20Diem/Divergent%20R-attitude/3d2bca9b86b9dd10813c3452a8de9f0c",
+  //     "https://res.cloudinary.com/dl3haplj1/image/upload/f_auto,q_auto/v1/ayodeji-kingsley/Selected/Collections/Carpe%20Diem/Divergent%20R-attitude/e36b224a4c354983bc693d3c3df3827a"
+  //   ],
+  //   "description": "Divergent Paths: Exploring Contrasting Attitudes Towards Life Through a Sculptural Allegory<br/>This analysis delves into the multifaceted concept of 'different conversations' by examining divergent attitudes towards life as depicted in a sculpture of two rats. The artwork serves as an allegory, prompting reflection on the diverse approaches individuals adopt in navigating life's journey and the contrasting perspectives that shape their experiences.\n\nThe sculpture portrays two rats in distinct postures, each embodying a particular attitude towards life. One rat is depicted in a state of perpetual motion, relentlessly searching for a better life, even after having seemingly reached the 'light at the end of the tunnel.' This rat symbolizes the restless spirit, the individual driven by an insatiable desire for progress and improvement, never content with the status quo.\n\nIn contrast, the other rat is perched on the edge of the tunnel, savoring the 'fruit of its labor' after having found the light. This rat represents the individual who finds contentment in achieving a goal and takes time to appreciate the rewards of their efforts. It embodies a more grounded and present-oriented approach to life, valuing the journey as much as the destination. This is further stressed by Yoruba ideology using the Yoruba proverb, 'Bí ọwọ́ eku ṣe mọ ló ṣe fi ńbọ́'jú / As the paws of a rat are, that's how they are used to wipe its face.'\n\nThese contrasting attitudes raise questions about the nature of fulfillment and the definition of a meaningful life. Is it found in the relentless pursuit of progress, or in the appreciation of present moments and accomplishments? The sculpture does not offer a definitive answer, but rather invites viewers to contemplate these divergent perspectives and consider their own approach to life.\n\nOne might argue that the rat resting at the top is merely taking a well-deserved break, recharging for future endeavors. Conversely, the rat in perpetual motion could be seen as in danger of burnout, neglecting the importance of rest and reflection. This ambiguity further enriches the artwork, highlighting the complexities of human experience and the absence of a singular 'correct' path.\n\nThe sculpture serves as a powerful reminder that there is no one-size-fits-all approach to life. Each individual's journey is unique, shaped by their personal experiences, values, and aspirations. The artwork encourages viewers to embrace this diversity, recognizing that both the relentless pursuit of progress and the appreciation of present moments have their own merits and contribute to the richness of human experience.\n\nFurthermore, the sculpture prompts reflection on the dynamic interplay between these contrasting attitudes. Perhaps the two rats represent different phases in an individual's life, or even internal conflicts within a single person. The artwork suggests that life is not a linear progression, but rather a fluid and evolving journey with moments of striving and moments of contentment.\n\nIn conclusion, the sculpture of the two rats provides a compelling visual representation of the theme 'different conversations.' It highlights the divergent attitudes individuals hold toward life."
+  // },
 ];

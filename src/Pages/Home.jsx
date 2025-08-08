@@ -97,7 +97,7 @@ const AboutSection = () => {
         {/* Image Container */}
         <div className="md:w-1/2 flex justify-center relative">
           <motion.img
-            src="https://res.cloudinary.com/dl3haplj1/image/upload/f_auto,q_auto:low/v1/ayodeji-kingsley/Website%202/Landing%20page/artist-pic-2"
+            src="https://res.cloudinary.com/dl3haplj1/image/upload/f_auto,q_auto:low,w_700/v1/ayodeji-kingsley/Website%202/Landing%20page/artist-pic-2"
             alt="Artist"
             className="rounded- shadow-2xl borde-4 border-whit w-full max-w-lg transform hover:scale-105 transition-transform duration-500"
             initial={{ opacity: 0, scale: 0.8 }}
@@ -149,7 +149,7 @@ const AboutSection = () => {
         {/* Image Container */}
         <div className="md:w-1/2 flex justify-center relative">
           <motion.img
-            src="https://res.cloudinary.com/dl3haplj1/image/upload/f_auto,q_auto/v1/ayodeji-kingsley/Website%202/Landing%20page/artist-pic-1"
+            src="https://res.cloudinary.com/dl3haplj1/image/upload/f_auto,q_auto,w_700/v1/ayodeji-kingsley/Website%202/Landing%20page/artist-pic-1"
             alt="Artist"
             className="rounded-lg shadow-2xl border-4 border-white w-full max-w-lg transform hover:scale-105 transition-transform duration-500"
             initial={{ opacity: 0, scale: 0.8 }}
@@ -205,7 +205,7 @@ const AboutSection = () => {
         {/* Image Container */}
         <div className="md:w-1/2 flex justify-center relative">
           <motion.img
-            src="https://res.cloudinary.com/dl3haplj1/image/upload/f_auto,q_auto/v1/ayodeji-kingsley/Website%202/Landing%20page/landing-bg"
+            src="https://res.cloudinary.com/dl3haplj1/image/upload/f_auto,q_auto,w_700/v1/ayodeji-kingsley/Website%202/Landing%20page/landing-bg"
             alt="Artist"
             className="rounded- shadow-2xl borde-4 border-whit w-full max-w-lg transform hover:scale-105 transition-transform duration-500"
             initial={{ opacity: 0, scale: 0.8 }}
@@ -260,7 +260,7 @@ const CTASection = () => {
     >
       {/* Subtle Background Animation */}
       <motion.div
-        className="absolute inset-0    bg-cover bg-center opacity-10  bg-[url('https://res.cloudinary.com/dl3haplj1/image/upload/f_auto,q_auto:low,w_900/v1/ayodeji-kingsley/Website%202/Landing%20page/ff591b4e94194049dfa87091f6310633')]"
+        className="absolute inset-0    bg-cover bg-center opacity-10  bg-[url('https://res.cloudinary.com/dl3haplj1/image/upload/f_auto,q_auto:low,w_700/v1/ayodeji-kingsley/Website%202/Landing%20page/ff591b4e94194049dfa87091f6310633')]"
         initial={{ scale: 1.1 }}
         animate={{ scale: 1 }}
         transition={{ duration: 5, repeat: Infinity, repeatType: "reverse" }}
