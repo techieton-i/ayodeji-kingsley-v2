@@ -9,41 +9,22 @@ const generateImageUrls = (folder, count, customNames) => {
 
 export const exhibitionData = [
   {
-    title: "Art of nature and spring",
-    text: "Berlin, Germany March, 2025",
-    link: "https://stanisonneartgallery.com/the-art-of-nature-and-spring-exhibition/",
-    images: generateImageUrls("Art of nature and spring", 2),
-  },
-  {
-    title: "Concurrence",
-    text: "London, UK January, 2025",
-    images: generateImageUrls("Concurrence", 16),
-  },
-  {
     title: "Domestic",
     text: "UK April, 2025",
     link: "https://www.artsteps.com/view/67ced284c9fda5a36847fbb3",
     images: generateImageUrls("Domestic", 4),
   },
   {
-    title: "Graduate Art Show",
-    text: "London,UK November, 2024",
-    images: generateImageUrls("Graduate art SHow", 11),
+    title: "Art of nature and spring",
+    text: "Berlin, Germany March, 2025",
+    link: "https://stanisonneartgallery.com/the-art-of-nature-and-spring-exhibition/",
+    images: generateImageUrls("Art of nature and spring", 2),
   },
   {
-    title: "Life in my city art festival (LIMCAF)",
-    text: "Enugu November, 2021",
-    images: generateImageUrls("Life in my City", 6),
-  },
-  {
-    title: "Lights in Shadow",
-    text: "Derby,UK December, 2024 ",
-    images: generateImageUrls("Lights in Shadow", 8),
-  },
-  {
-    title: "Mini art fare",
-    text: "Lagos, Nigeria December, 2021",
-    images: generateImageUrls("Mini art fare", 4),
+    title: "Open Theme",
+    link: "https://art-collide.com/",
+    text: "London, UK March, 2025",
+    images: [],
   },
   {
     title: "Our Natural World",
@@ -56,6 +37,31 @@ export const exhibitionData = [
     images: generateImageUrls("Reroll", 3),
   },
   {
+    title: "Concurrence",
+    text: "London, UK January, 2025",
+    images: generateImageUrls("Concurrence", 16),
+  },
+  {
+    title: "Lights in Shadow",
+    text: "Derby,UK December, 2024 ",
+    images: generateImageUrls("Lights in Shadow", 8),
+  },
+  {
+    title: "Graduate Art Show",
+    text: "London,UK November, 2024",
+    images: generateImageUrls("Graduate art SHow", 11),
+  },
+  {
+    title: "Mini art fare",
+    text: "Lagos, Nigeria December, 2021",
+    images: generateImageUrls("Mini art fare", 4),
+  },
+  {
+    title: "Life in my city art festival (LIMCAF)",
+    text: "Enugu November, 2021",
+    images: generateImageUrls("Life in my City", 6),
+  },
+  {
     title: "Upcycling Redefined",
     text: "Abuja, Nigeria September, 2021",
     images: generateImageUrls("Upcycling Redefined", 12),
@@ -64,12 +70,6 @@ export const exhibitionData = [
     title: "Youtube Africa day",
     text: "Lagos, Nigeria May, 2021",
     images: generateImageUrls("Youtube Africa day", 10),
-  },
-  {
-    title: "Open Theme",
-    link: "https://art-collide.com/",
-    text: "London, UK March, 2025",
-    images: [],
   },
 ];
 
