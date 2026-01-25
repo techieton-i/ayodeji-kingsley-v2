@@ -178,14 +178,14 @@ const Navbar = () => {
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className={`sticky top-0 left-0 w-full z-20 transition-all duration-300 ${
+      className={`sticky top-0 left-0 w-full z-20 transition-all duration-300 border-b border-transparent ${
         isScrolled
           ? isHomepage
-            ? " bg-metal-900 shadow-lg"
-            : "bg-white shadow-lg"
+            ? "bg-metal-900/80 backdrop-blur-md shadow-lg border-white/10"
+            : "bg-white/80 backdrop-blur-md shadow-lg border-neutral-200/50"
           : isHomepage
-            ? "bg-metal-900"
-            : "bg-white shadow-lg"
+            ? "bg-metal-900 backdrop-blur-md shadow-lg border-white/10"
+            : "bg-white/80 backdrop-blur-md shadow-lg"
       }`}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
@@ -217,9 +217,9 @@ const Navbar = () => {
               } ${hoverTextColorClass}`}
             >
               {item}
-              <span
-                className={`absolute bottom-0 left-0 w-0 h-1 transition-all duration-300 group-hover:w-full ${
-                  isHomepage ? "bg-rust-400" : "bg-rust-500"
+                <span
+                className={`absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 ease-out group-hover:w-full rounded-full ${
+                  isHomepage ? "bg-rust-400 shadow-[0_0_8px_rgba(249,115,22,0.6)]" : "bg-rust-500"
                 }`}
               ></span>
             </NavLink>

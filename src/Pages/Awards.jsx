@@ -90,21 +90,23 @@ export default function AwardShowcaseScroll() {
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="flex flex-col md:flex-row items-center gap-10 p-10"
             >
-              <img
+              <motion.img
                 src={art.image}
                 alt={art.title}
-                className="w-full md:w-1/2 rounded-xl shadow-lg object-cover max-h-[70vh] cursor-pointer"
+                className="w-full md:w-1/2 rounded-2xl shadow-2xl object-cover max-h-[70vh] cursor-pointer"
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.4 }}
               />
               <div className="text-left max-w-md">
-                <h2 className="text-3xl font-bold mb-2">{art.title}</h2>
+                <h2 className="text-3xl font-bold mb-2 font-heading tracking-tight">{art.title}</h2>
                 <a
                   href={art.link}
                   target="_blank"
-                  className="text-sm text-gray-500 italic mb-4 hover:text-rust-600 transition"
+                  className="inline-block text-sm text-rust-600 font-bold italic mb-6 hover:text-rust-700 transition border-b border-rust-600/30 hover:border-rust-700"
                 >
                   {art.award}
                 </a>
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed font-light text-lg">
                   {art.description}
                 </p>
                 {index < artworks.length - 1 && (
@@ -122,12 +124,18 @@ export default function AwardShowcaseScroll() {
       })}
       <div className="h-screen snap-start flex flex-col items-center justify-center bg-white px-6 py-12">
         <h2 className="text-3xl font-bold mb-4">Awards List</h2>
-        <ul className="max-w-2xl w-full text-gray-700 space-y-4">
+        <ul className="max-w-3xl w-full text-gray-700 space-y-6">
           {awardList.map((art, i) => (
-            <li key={art.title + i} className="border-b pb-2">
-              <span className="font-semibold">{art.title}</span> —{" "}
-              <span className="italic text-gray-500">{art.award}</span>
-            </li>
+            <motion.li 
+                key={art.title + i} 
+                className="border-b border-gray-200 pb-4 flex justify-between items-center hover:bg-gray-50 p-4 rounded-lg transition-colors cursor-default"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: i * 0.1 }}
+            >
+              <span className="font-bold text-lg text-gray-900">{art.title}</span>
+              <span className="italic text-gray-500 text-sm text-right ml-4">{art.award}</span>
+            </motion.li>
           ))}
         </ul>
       </div>

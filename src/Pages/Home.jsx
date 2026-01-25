@@ -22,6 +22,9 @@ const Home = () => {
 export default Home;
 
 const HeroSection = () => {
+  const { scrollY } = useScroll();
+  const y = useTransform(scrollY, [0, 500], [0, 200]);
+
   return (
     <motion.section
       className="relative h-screen flex flex-col justify-center items-center text-center overflow-hidden"
@@ -29,41 +32,65 @@ const HeroSection = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
-      {/* Background Image */}
-      <img
-        className="absolute top-0 left-0 w-full h-full object-cover"
-        src="https://res.cloudinary.com/dl3haplj1/image/upload/f_auto,q_auto/v1/ayodeji-kingsley/Website%202/Landing%20page/landing-gif"
-        alt="Background"
-      />
+      {/* Background Image with Parallax */}
+      <motion.div style={{ y }} className="absolute top-0 left-0 w-full h-full">
+        <img
+          className="w-full h-full object-cover scale-110"
+          src="https://res.cloudinary.com/dl3haplj1/image/upload/f_auto,q_auto/v1/ayodeji-kingsley/Website%202/Landing%20page/landing-gif"
+          alt="Background"
+        />
+      </motion.div>
 
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent pointer-events-none" />
 
       {/* Hero Content */}
       <motion.div
         className="relative z-10 max-w-3xl mx-auto px-6 text-white"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 0.5 }}
+        initial="hidden"
+        animate="visible"
+        variants={{
+          hidden: { opacity: 0, y: 20 },
+          visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+              staggerChildren: 0.2,
+              delayChildren: 0.3
+            }
+          }
+        }}
       >
-        <p className="text-lg sm:text-xl text-orange-400 mb-2">Hi, I'm</p>
+        <motion.p 
+          variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
+          className="text-lg sm:text-xl text-orange-400 mb-2 font-medium tracking-wide"
+        >
+          Hi, I'm
+        </motion.p>
 
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-wide leading-tight mb-4 font-hero">
+        <motion.h1 
+          variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
+          className="text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight leading-tight mb-6 font-hero drop-shadow-2xl"
+        >
           Ayodeji Kingsley
-        </h1>
+        </motion.h1>
 
-        <p className="text-lg sm:text-xl text-gray-200 mb-8 max-w-xl mx-auto">
+        <motion.p 
+          variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
+          className="text-lg sm:text-xl text-gray-200 mb-10 max-w-xl mx-auto font-light leading-relaxed"
+        >
           A visual artist and environmental enthusiast
-        </p>
+        </motion.p>
 
         <motion.div
+          variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className="inline-block"
         >
           <Link
             to="/collections"
-            className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-8 rounded-lg shadow-lg transition duration-300"
+            className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold py-4 px-10 rounded-full shadow-[0_0_20px_rgba(249,115,22,0.5)] transition-all duration-300 backdrop-blur-sm"
           >
             Explore Collections
           </Link>
@@ -94,15 +121,20 @@ const AboutSection = () => {
       <motion.div className="font-body mx-auto container relative flex flex-col md:flex-row-reverse items-center justify-between px-6 lg:px-[10rem] gap-12 py-16 bg-gradient-to-b from-gray-100 to-white dark:from-gray-900 dark:to-gray-800 dark:!bg-none">
         <div className="absolute top-0 left-0 w-full h-full opacity-10 bg-[url('https://www.transparenttextures.com/patterns/black-thread-light.png')]" />
 
-        {/* Image Container */}
+        {/* Image Container with Floating Animation */}
         <div className="md:w-1/2 flex justify-center relative">
           <motion.img
             src="https://res.cloudinary.com/dl3haplj1/image/upload/f_auto,q_auto:low,w_700/v1/ayodeji-kingsley/Website%202/Landing%20page/artist-pic-2"
             alt="Artist"
-            className="rounded- shadow-2xl borde-4 border-whit w-full max-w-lg transform hover:scale-105 transition-transform duration-500"
+            className="rounded-lg shadow-2xl w-full max-w-lg"
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1 }}
+            animate={{ y: [0, -15, 0] }}
+            transition={{ 
+              opacity: { duration: 1 },
+              scale: { duration: 1 },
+              y: { duration: 6, repeat: Infinity, ease: "easeInOut" } 
+            }}
             loading="lazy"
           />
         </div>
@@ -110,15 +142,15 @@ const AboutSection = () => {
         {/* Text Content */}
         <motion.div
           className="md:w-1/2 text-left space-y-6 relative z-10"
-          initial={{ opacity: 0, x: 50 }}
+          initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
         >
-          <h2 className="text-2xl font-semibold text-gray-900 dark:text-white leading-tight tracking-wide">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white leading-tight tracking-wide font-hero">
             <i>See What I Feel. Feel What I See.</i>
           </h2>
           <motion.div
-            className="space-y-5 dark:text-white "
+            className="space-y-5 dark:text-white"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-20%" }}
@@ -126,7 +158,7 @@ const AboutSection = () => {
               visible: { transition: { staggerChildren: 0.1 } },
             }}
           >
-            <motion.p className="font-medium">
+            <motion.p className="font-medium text-lg leading-relaxed text-gray-700 dark:text-gray-200">
               “My work is aimed at bringing to your mind the strong feeling of
               your tender vision. This kind of art expresses aesthetics in Solid
               forms with surrealism and paranomasia as the principal theme. I’m
@@ -138,10 +170,9 @@ const AboutSection = () => {
               and the beauty of the world”
             </motion.p>
           </motion.div>
-          <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed font-light"></p>
-          <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed font-light"></p>
         </motion.div>
       </motion.div>
+      
       {/* about content 1 */}
       <motion.div className="mx-auto container relative flex flex-col md:flex-row items-center justify-between px-6 lg:px-[10rem] gap-12 py-10 bg-gradient-to-b from-gray-100 to-white dark:from-gray-900 dark:to-gray-800 dark:!bg-none">
         <div className="absolute top-0 left-0 w-full h-full opacity-10 bg-[url('https://www.transparenttextures.com/patterns/black-thread-light.png')]" />
@@ -151,10 +182,15 @@ const AboutSection = () => {
           <motion.img
             src="https://res.cloudinary.com/dl3haplj1/image/upload/f_auto,q_auto,w_700/v1/ayodeji-kingsley/Website%202/Landing%20page/artist-pic-1"
             alt="Artist"
-            className="rounded-lg shadow-2xl border-4 border-white w-full max-w-lg transform hover:scale-105 transition-transform duration-500"
+            className="rounded-lg shadow-2xl w-full max-w-lg"
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1 }}
+            animate={{ y: [0, -10, 0] }}
+            transition={{ 
+              opacity: { duration: 1 },
+              scale: { duration: 1 },
+              y: { duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 } 
+            }}
           />
         </div>
 
@@ -166,7 +202,7 @@ const AboutSection = () => {
           transition={{ duration: 1 }}
         >
           <motion.div
-            className="space-y-5 dark:text-white "
+            className="space-y-5 dark:text-white"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-20%" }}
@@ -174,7 +210,7 @@ const AboutSection = () => {
               visible: { transition: { staggerChildren: 0.1 } },
             }}
           >
-            <motion.p className="font-medium">
+            <motion.p className="font-medium text-lg leading-relaxed text-gray-700 dark:text-gray-200">
               For the past couple of years, I've been working on a pre-existing
               art concept, but with a unique lens of expression. I've truly
               explored and demonstrated the magnificent use of what others
@@ -183,7 +219,7 @@ const AboutSection = () => {
               animals, tools, and various other items.
             </motion.p>
             <motion.div className="space-y-4">
-              <p>
+              <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-200">
                 The evolution of humanity and the advancement of science and
                 technology have clearly shown just how useful metals are, and
                 this utility extends to art in all its forms and systems.
@@ -193,8 +229,6 @@ const AboutSection = () => {
               </p>
             </motion.div>
           </motion.div>
-          <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed font-light"></p>
-          <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed font-light"></p>
         </motion.div>
       </motion.div>
 
@@ -207,10 +241,15 @@ const AboutSection = () => {
           <motion.img
             src="https://res.cloudinary.com/dl3haplj1/image/upload/f_auto,q_auto,w_700/v1/ayodeji-kingsley/Website%202/Landing%20page/landing-bg"
             alt="Artist"
-            className="rounded- shadow-2xl borde-4 border-whit w-full max-w-lg transform hover:scale-105 transition-transform duration-500"
+            className="rounded-lg shadow-2xl w-full max-w-lg"
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1 }}
+            animate={{ y: [0, -12, 0] }}
+            transition={{ 
+              opacity: { duration: 1 },
+              scale: { duration: 1 },
+              y: { duration: 7, repeat: Infinity, ease: "easeInOut", delay: 0.5 } 
+            }}
             loading="lazy"
           />
         </div>
@@ -218,12 +257,12 @@ const AboutSection = () => {
         {/* Text Content */}
         <motion.div
           className="md:w-1/2 text-left space-y-6 relative z-10"
-          initial={{ opacity: 0, x: 50 }}
+          initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
         >
           <motion.div
-            className="space-y-5 dark:text-white "
+            className="space-y-5 dark:text-white"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-20%" }}
@@ -231,7 +270,7 @@ const AboutSection = () => {
               visible: { transition: { staggerChildren: 0.1 } },
             }}
           >
-            <motion.p className="font-medium">
+            <motion.p className="font-medium text-lg leading-relaxed text-gray-700 dark:text-gray-200">
               I've developed a strong interest in transforming scrap into
               incredible, plausible, and almost indispensable ideas for our
               world today. I've chosen a path that converts static rubbish into
@@ -241,8 +280,6 @@ const AboutSection = () => {
               image of the unequalled ultimate creator.
             </motion.p>
           </motion.div>
-          <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed font-light"></p>
-          <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed font-light"></p>
         </motion.div>
       </motion.div>
     </motion.section>
@@ -252,7 +289,7 @@ const AboutSection = () => {
 const CTASection = () => {
   return (
     <motion.section
-      className="py-16 flex flex-col items-center justify-center text-center bg-gray-900 text-white relative overflow-hidden h-[50vh]"
+      className="py-24 flex flex-col items-center justify-center text-center bg-gray-900 text-white relative overflow-hidden min-h-[50vh]"
       initial={{ scale: 1, opacity: 0 }}
       whileInView={{ scale: 1, opacity: 1 }}
       viewport={{ once: true }}
@@ -260,43 +297,48 @@ const CTASection = () => {
     >
       {/* Subtle Background Animation */}
       <motion.div
-        className="absolute inset-0    bg-cover bg-center opacity-10  bg-[url('https://res.cloudinary.com/dl3haplj1/image/upload/f_auto,q_auto:low,w_700/v1/ayodeji-kingsley/Website%202/Landing%20page/ff591b4e94194049dfa87091f6310633')]"
+        className="absolute inset-0 bg-cover bg-center opacity-20 bg-[url('https://res.cloudinary.com/dl3haplj1/image/upload/f_auto,q_auto:low,w_700/v1/ayodeji-kingsley/Website%202/Landing%20page/ff591b4e94194049dfa87091f6310633')]"
         initial={{ scale: 1.1 }}
         animate={{ scale: 1 }}
-        transition={{ duration: 5, repeat: Infinity, repeatType: "reverse" }}
+        transition={{ duration: 10, repeat: Infinity, repeatType: "reverse" }}
       />
-      {/* // bg-[url('https://img.freepik.com/free-photo/3d-rendering-robotic-eagle_23-2151056226.jpg?t=st=1743274638~exp=1743278238~hmac=265c4fb6acaeeb0a7602132fd4696b0cdc38608470ff1b26bd0aefffd2cfe2d4&w=826')] */}
-
-      <motion.h2
-        className="text-4xl font-bold relative z-10"
-        initial={{ y: -20, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.8, delay: 0.3 }}
-      >
-        Explore the Collections
-      </motion.h2>
-
-      <motion.p
-        className="mt-2 text-gray-300 max-w-xl mx-auto relative z-10"
-        initial={{ y: 20, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.8, delay: 0.5 }}
-      >
-        Discover unique pieces that capture the essence of metal art.
-      </motion.p>
-
-      <motion.div
-        className="mt-6 relative z-10"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}
-      >
-        <Link
-          to="/collections"
-          className="inline-block bg-orange-500 text-white px-6 py-3 rounded-lg shadow-md hover:bg-orange-600 transition"
+      
+      <div className="relative z-10 max-w-4xl px-6">
+        <motion.h2
+          className="text-4xl md:text-5xl font-bold font-hero mb-6"
+          initial={{ y: -20, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
         >
-          View Collections
-        </Link>
-      </motion.div>
+          Explore the Collections
+        </motion.h2>
+
+        <motion.p
+          className="text-xl text-gray-300 max-w-2xl mx-auto mb-10 font-light"
+          initial={{ y: 20, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+        >
+          Discover unique pieces that capture the essence of metal art.
+        </motion.p>
+
+        <motion.div
+          className="relative z-10 inline-block"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          animate={{ scale: [1, 1.02, 1] }}
+          transition={{ 
+            scale: { duration: 2, repeat: Infinity } 
+          }}
+        >
+          <Link
+            to="/collections"
+            className="bg-orange-500 hover:bg-orange-600 text-white text-lg font-semibold py-4 px-12 rounded-full shadow-[0_4px_14px_0_rgba(249,115,22,0.39)] hover:shadow-[0_6px_20px_rgba(249,115,22,0.23)] transition duration-300 ease-linear"
+          >
+            View Collections
+          </Link>
+        </motion.div>
+      </div>
     </motion.section>
   );
 };

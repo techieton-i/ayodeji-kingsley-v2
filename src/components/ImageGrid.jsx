@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { Blurhash } from "react-blurhash";
 import { ArtModal } from "./LightBox";
 
-const LazyLoadImage = ({ image, index, onClick }) => {
+const LazyLoadImage = ({ image, index, onClick, variants }) => {
   const { ref, isLoaded, blurhash } = useLazyLoad();
   const containerRef = useRef(null);
   const [size, setSize] = useState({ width: 0, height: 0 });
@@ -25,11 +25,9 @@ const LazyLoadImage = ({ image, index, onClick }) => {
   return (
     <motion.div
       ref={containerRef}
-      className="mb-4 relative overflow-hidden rounded-lg shadow-lg break-inside-avoid"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: index * 0.05 }}
-      whileHover={{ scale: 1.02 }}
+      className="mb-4 relative overflow-hidden rounded-lg shadow-lg break-inside-avoid group cursor-pointer"
+      variants={variants}
+      whileHover={{ y: -5 }}
     >
       {!isLoaded && blurhash && (
         <Blurhash
@@ -53,22 +51,16 @@ const LazyLoadImage = ({ image, index, onClick }) => {
         loading="lazy"
       />
       <div
-        className="absolute inset-0 flex flex-col justify-center items-center bg-gradient-to-t from-black/80 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 p-4 cursor-pointer"
+        className="absolute inset-0 flex flex-col justify-center items-center bg-black/60 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4"
         onClick={() => onClick(image.images, image.title, image.description)}
       >
         <motion.h3
-          className="text-lg font-semibold text-white text-center mb-2"
-          initial={{ y: 10 }}
-          animate={{ y: 0 }}
-          transition={{ delay: 0.2 }}
+          className="text-xl font-bold text-white text-center mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
         >
           {image.title}
         </motion.h3>
         <motion.p
-          className="text-sm text-white/90 text-center"
-          initial={{ y: 15 }}
-          animate={{ y: 0 }}
-          transition={{ delay: 0.25 }}
+          className="text-sm text-gray-200 text-center translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75"
         >
           {image.desc}
         </motion.p>
@@ -86,10 +78,34 @@ const ImageGrid = ({ images }) => {
 
   const closeArtModal = () => setModalData(null);
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
+
   return (
     <>
-      <div
+      <motion.div
         className={`columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 p-4 ${modalData?.show ? "pointer-events-none blur-sm" : ""}`}
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
       >
         {images?.map((image, index) => (
           <LazyLoadImage
@@ -97,9 +113,10 @@ const ImageGrid = ({ images }) => {
             image={image}
             index={index}
             onClick={openArtModal}
+            variants={itemVariants}
           />
         ))}
-      </div>
+      </motion.div>
       {modalData?.show && (
         <ArtModal
           isOpen={modalData?.show || false}

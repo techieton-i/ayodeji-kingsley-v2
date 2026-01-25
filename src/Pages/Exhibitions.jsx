@@ -37,10 +37,12 @@ function Exhibitions({}) {
     >
       <motion.h1
         variants={{
-          hidden: { opacity: 0 },
-          visible: { opacity: 1, transition: { duration: 0.8 } },
+          hidden: { opacity: 0, y: -20 },
+          visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
         }}
-        className="absolute top-10 left-1/2 -translate-x-1/2 z-10 text-xl md:text-3xl font-bold text-center mb-20 bg-clip-text text-transparent bg-gradient-to-r from-zinc-400 to-zinc-700 font-heading tracking-tight"
+        initial="hidden"
+        animate="visible"
+        className="fixed top-8 left-1/2 -translate-x-1/2 z-20 text-4xl md:text-5xl font-black text-center mb-20 bg-clip-text text-transparent bg-gradient-to-r from-zinc-500 to-zinc-900 font-hero tracking-tighter uppercase drop-shadow-sm mix-blend-difference"
       >
         Exhibitions
       </motion.h1>
@@ -71,10 +73,10 @@ function Exhibitions({}) {
                   No Image Available
                 </p>
               )}
-              <div className="text-left max-w-md">
-                <h2 className="text-3xl font-bold mb-2">{art.title}</h2>
-                <p className="text-sm text-gray-500 italic mb-4">{art.text}</p>
-                <p className="text-gray-700 leading-relaxed">
+              <div className="text-left max-w-lg md:pl-8">
+                <h2 className="text-4xl font-bold mb-3 font-heading tracking-tight text-gray-900">{art.title}</h2>
+                <p className="text-base text-rust-600 font-medium italic mb-6 tracking-wide uppercase text-xs">{art.text}</p>
+                <p className="text-gray-700 leading-loose text-lg font-light">
                   {art.description}
                 </p>
                 {index < exhibitionData.length - 1 && (

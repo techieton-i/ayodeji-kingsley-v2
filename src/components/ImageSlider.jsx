@@ -141,8 +141,8 @@ const ArtGallerySlider = ({ images }) => {
             animate="center"
             exit="exit"
             transition={{
-              x: { type: "spring", stiffness: 200, damping: 25 },
-              opacity: { duration: 0.4 },
+              x: { type: "spring", stiffness: 150, damping: 30 },
+              opacity: { duration: 0.5 },
             }}
             className="absolut flex items-center justify-center"
           >
@@ -150,15 +150,15 @@ const ArtGallerySlider = ({ images }) => {
               src={getImage(currentIndex).src}
               alt={`Artwork ${currentIndex + 1}`}
               className="w-full h-auto object-contain"
-              initial={{ scale: 0.95, opacity: 0.8 }}
+              initial={{ scale: 0.98, opacity: 0.9 }}
               animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.6 }}
               onClick={() => setFullscreen(true)}
               style={{ cursor: "zoom-in" }}
               loading="lazy"
             />
             <motion.div
-              className="absolute bottom-4 right-4 bg-black/20 backdrop-blur-sm text-white p-2"
+              className="absolute bottom-4 right-4 bg-black/40 backdrop-blur-md text-white p-3 rounded-full shadow-lg border border-white/10"
               initial={{ opacity: 0 }}
               animate={{ opacity: 0.7 }}
               whileHover={{ opacity: 1, scale: 1.1 }}
@@ -176,15 +176,15 @@ const ArtGallerySlider = ({ images }) => {
         )}
 
         {images.length > 1 && (
-          <div className="absolute bottom-6 left-0 right-0 flex justify-center gap-2 z-10">
+          <div className="absolute bottom-6 left-0 right-0 flex justify-center gap-3 z-10">
             {images.map((_, index) => (
               <button
                 key={index}
                 onClick={() => handleDotClick(index)}
-                className={`w-2.5 h-2.5 transition-all duration-300 rounded-full ${
+                className={`w-2 h-2 transition-all duration-300 rounded-full shadow-sm ${
                   index === currentIndex
-                    ? "bg-white scale-125"
-                    : "bg-white/40 hover:bg-white/60"
+                    ? "bg-white scale-150 ring-2 ring-white/50"
+                    : "bg-white/40 hover:bg-white/80"
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
               />
@@ -192,7 +192,7 @@ const ArtGallerySlider = ({ images }) => {
           </div>
         )}
 
-        <div className="absolute top-4 right-4 bg-black/30 backdrop-blur-sm text-white text-sm px-3 py-1">
+        <div className="absolute top-4 right-4 bg-black/40 backdrop-blur-md text-white text-xs font-bold px-3 py-1.5 rounded-full border border-white/10">
           {currentIndex + 1} / {images.length}
         </div>
       </div>
@@ -204,10 +204,10 @@ const ArtGallerySlider = ({ images }) => {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.98 }}
             transition={{ duration: 0.4, ease: "easeInOut" }}
-            className="fixed inset-0 bg-black/95 backdrop-blur-md z-[9999] flex items-center justify-center"
+            className="fixed inset-0 bg-black/95 backdrop-blur-xl z-[9999] flex items-center justify-center"
           >
             <motion.button
-              className="absolute top-6 right-6 bg-black/30 backdrop-blur-sm text-white p-3 z-30"
+              className="absolute top-6 right-6 bg-black/40 backdrop-blur-md text-white p-3 rounded-full z-30 border border-white/10"
               whileHover={{
                 scale: 1.1,
                 backgroundColor: "rgba(255,255,255,0.2)",
@@ -231,7 +231,7 @@ const ArtGallerySlider = ({ images }) => {
                   animate="center"
                   exit="exit"
                   transition={{
-                    x: { type: "spring", stiffness: 200, damping: 25 },
+                    x: { type: "spring", stiffness: 150, damping: 30 },
                     opacity: { duration: 0.4 },
                   }}
                   className="absolute inset-0 flex items-center justify-center"
@@ -240,7 +240,7 @@ const ArtGallerySlider = ({ images }) => {
                   <motion.img
                     src={getImage(currentIndex).src}
                     alt={`Fullscreen Artwork ${currentIndex + 1}`}
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-contain p-4 md:p-10"
                     initial={{ scale: 0.95, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
                     exit={{ scale: 0.95, opacity: 0 }}
@@ -281,7 +281,7 @@ const ArtGallerySlider = ({ images }) => {
                     }}
                     className={`w-3 h-3 transition-all duration-300 rounded-full  ${
                       index === currentIndex
-                        ? "bg-white scale-125"
+                        ? "bg-white scale-125 shadow-lg"
                         : "bg-white/30 hover:bg-white/60"
                     }`}
                     aria-label={`Go to fullscreen slide ${index + 1}`}
@@ -289,7 +289,7 @@ const ArtGallerySlider = ({ images }) => {
                 ))}
               </div>
 
-              <div className="absolute top-6 left-6 bg-black/30 backdrop-blur-sm text-white text-sm px-4 py-2">
+              <div className="absolute top-6 left-6 bg-black/40 backdrop-blur-md text-white text-sm px-4 py-2 rounded-full border border-white/10">
                 {currentIndex + 1} / {images.length}
               </div>
             </div>
@@ -306,22 +306,20 @@ const NavigationButton = ({ direction, onClick, fullscreen = false }) => {
   return (
     <motion.button
       className={`absolute ${isLeft ? "left-3" : "right-3"} top-1/2 -translate-y-1/2 
-        ${fullscreen ? "bg-black/20" : "bg-black/30"} backdrop-blur-sm 
-        text-white p-3 rounded-full z-20`}
+        ${fullscreen ? "bg-black/20 hover:bg-black/40" : "bg-black/30 hover:bg-black/50"} backdrop-blur-md 
+        text-white p-4 rounded-full z-20 border border-white/10 shadow-lg`}
       whileHover={{
-        scale: 1.1,
-        backgroundColor: fullscreen
-          ? "rgba(255,255,255,0.2)"
-          : "rgba(0,0,0,0.5)",
+        scale: 1.15,
+        x: isLeft ? -2 : 2,
       }}
       whileTap={{ scale: 0.95 }}
-      initial={{ opacity: 0.7 }}
-      animate={{ opacity: 0.7 }}
+      initial={{ opacity: 0.6 }}
+      animate={{ opacity: 0.9 }}
       transition={{ duration: 0.2 }}
       onClick={onClick}
       aria-label={isLeft ? "Previous image" : "Next image"}
     >
-      {isLeft ? <ChevronLeft size={24} /> : <ChevronRight size={24} />}
+      {isLeft ? <ChevronLeft size={28} /> : <ChevronRight size={28} />}
     </motion.button>
   );
 };

@@ -1,5 +1,6 @@
 import { Suspense, useEffect } from "react";
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 import Home from "./Pages/Home";
 import Collections from "./Pages/Collections";
 import Navbar from "./components/Navbar";
@@ -37,26 +38,36 @@ function App() {
       <BrowserRouter>
         <ScrollToTop />
         <Navbar />
-        <Routes>
-          <Route index element={<Home />} />
-          <Route path="/home" element={<Navigate to="/" replace />} />
-          <Route path="/collections" element={<Collections />} />
-          <Route
-            path="/collections/:category"
-            element={<CollectionDetails />}
-          />
-          <Route path="/gallery" element={<Gallery />} />
-          <Route path="/media" element={<AwardShowcaseScroll />} />
-          <Route path="/about" element={<Biography />} />
-          <Route path="/exhibitions" element={<Exhibitions />} />
-          <Route path="/residency" element={<Residency />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/*" element={<ComingSoon />} />
-        </Routes>
+        <AnimatedRoutes />
         <Footer />
       </BrowserRouter>
     </Suspense>
   );
 }
+
+const AnimatedRoutes = () => {
+  const location = useLocation();
+
+  return (
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        <Route index element={<Home />} />
+        <Route path="/home" element={<Navigate to="/" replace />} />
+        <Route path="/collections" element={<Collections />} />
+        <Route
+          path="/collections/:category"
+          element={<CollectionDetails />}
+        />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/media" element={<AwardShowcaseScroll />} />
+        <Route path="/about" element={<Biography />} />
+        <Route path="/exhibitions" element={<Exhibitions />} />
+        <Route path="/residency" element={<Residency />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/*" element={<ComingSoon />} />
+      </Routes>
+    </AnimatePresence>
+  );
+};
 
 export default App;
