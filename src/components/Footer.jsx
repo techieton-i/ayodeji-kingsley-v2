@@ -4,7 +4,8 @@ import logo2 from "@assets/Certified-Carbon-Literate.png";
 import logo3 from "@assets/download.png";
 import logo4 from "@assets/hhhh.png";
 import logo5 from "@assets/eco.png";
-import twitterIcon from "@assets/twitterx.svg";
+import logo6 from "@assets/PDA.png";
+import pinterestIcon from "@assets/pinterest.svg";
 import instaIcon from "@assets/instagram-svgrepo-com.svg";
 import tiktokIcon from "@assets/tiktok-svgrepo-com.svg";
 import mailIcon from "@assets/mail-letter-svgrepo-com.svg";
@@ -12,7 +13,7 @@ import { Link } from "react-router-dom";
 
 const Icon = ({ src, alt }) => <img src={src} alt={alt} className="w-7 h-7" />;
 
-const logos = [logo1, logo2, logo3, logo4, logo5];
+const logos = [logo1, logo2, logo3, logo4, logo5, logo6];
 
 const Footer = () => {
   return (
@@ -35,7 +36,13 @@ const Footer = () => {
         </div>
 
         <div className="flex flex-wrap items-center gap-10 text-xl">
-          <Icon src={twitterIcon} alt="twitter" />
+          <a
+            href="https://pinterest.com/appreciatekingsley"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Icon src={pinterestIcon} alt="pinterest" />
+          </a>
           <a
             href="https://www.instagram.com/theayodejikingsley"
             target="_blank"
