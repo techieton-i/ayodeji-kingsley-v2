@@ -39,10 +39,10 @@ export default function AwardShowcaseScroll() {
   useEffect(() => {
     const handleScroll = () => {
       const positions = sectionRefs.current.map(
-        (ref) => ref?.getBoundingClientRect().top ?? 0
+        (ref) => ref?.getBoundingClientRect().top ?? 0,
       );
       const index = positions.findIndex(
-        (pos) => pos >= 0 && pos < window.innerHeight / 2
+        (pos) => pos >= 0 && pos < window.innerHeight / 2,
       );
       if (index !== -1) setActiveIndex(index);
     };
@@ -71,7 +71,7 @@ export default function AwardShowcaseScroll() {
         Selected Media
       </motion.h1>
 
-      {artworks.map((art, index) => {
+      {artworks.reverse().map((art, index) => {
         const ref = useRef(null);
         const isInView = useInView(ref, { once: true });
 

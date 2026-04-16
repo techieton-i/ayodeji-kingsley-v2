@@ -1,12 +1,31 @@
+import VanguardPng from "@assets/Vanguard.png";
+import CulturePng from "@assets/our Culture Mag.png";
+import LuminoirPng from "@assets/Luminoir.png";
+import BlackArtPng from "@assets/Black Art review.png";
+
 export const artworks = [
   {
-    id: "art1",
-    title: "Art Review",
-    award:
-      "Our Home, Natural world Exhibition MetaSpace Gallery, Liverpool, UK March, 2025",
-    link: "https://metaspacegallery.co.uk/2025/02/23/curatorial-review-of-ayodeji-kingsley-in-our-home-natural-world/",
+    id: "art7",
+    title: "Art Interview/Exhibition",
+    award: "Channels TV, Abuja, Nigeria September, 2021",
+    link: "https://youtu.be/tR-ezRO4vd4?si=CZM5Y2ywZ5kgCP-D",
     image:
-      "https://res.cloudinary.com/dl3haplj1/image/upload/f_auto,q_auto/v1/ayodeji-kingsley/Website%202/Media%20And%20Awards/Media/Art%20Review/ee3ed52346be797825a7a2fdf820f77b",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/f_auto,q_auto/v1/ayodeji-kingsley/Website%202/Media%20And%20Awards/Media/Upcyling%20Redefined/b6a256fa85ddebd51b34e1b0b4570603",
+  },
+  {
+    id: "art5",
+    title: "Published Catalogue",
+    award: "Iwalewa Gallery,Lagos December, 2021",
+    link: "https://anyflip.com/bookcase/aexu/",
+    image:
+      "https://res.cloudinary.com/dl3haplj1/image/upload/f_auto,q_auto/v1/ayodeji-kingsley/Website%202/Media%20And%20Awards/Media/Miniature%20Art%20fair/65d496698a668167659ad9694e06dea2",
+  },
+
+  {
+    id: "art12",
+    title: "Art Article Vanguard Newspaper",
+    award: "October, 2023",
+    image: VanguardPng,
   },
   {
     id: "art2",
@@ -17,12 +36,37 @@ export const artworks = [
       "https://res.cloudinary.com/dl3haplj1/image/upload/f_auto,q_auto/v1/ayodeji-kingsley/88b6735d314530a1e36b14e7be7a43c4",
   },
   {
+    id: "art6",
+    title: "Our Home – Natural World Interview",
+    award: "MetaSpace Gallery, Liverpool, UK March, 2025",
+    link: "https://metaspacegallery.co.uk/our-home-natural-world/",
+    image:
+      "https://res.cloudinary.com/dl3haplj1/image/upload/f_auto,q_auto/v1/ayodeji-kingsley/Website%202/Media%20And%20Awards/meta%20space",
+  },
+  {
+    id: "art1",
+    title: "Art Review",
+    award:
+      "Our Home, Natural world Exhibition MetaSpace Gallery, Liverpool, UK March, 2025",
+    link: "https://metaspacegallery.co.uk/2025/02/23/curatorial-review-of-ayodeji-kingsley-in-our-home-natural-world/",
+    image:
+      "https://res.cloudinary.com/dl3haplj1/image/upload/f_auto,q_auto/v1/ayodeji-kingsley/Website%202/Media%20And%20Awards/Media/Art%20Review/ee3ed52346be797825a7a2fdf820f77b",
+  },
+  {
     id: "art3",
     title: "Art Magazine",
     award: "Collect Art, Georgia. March, 2025",
     link: " https://www.collectartwork.org/post/men-art-special-edition",
     image:
       "https://res.cloudinary.com/dl3haplj1/image/upload/f_auto,q_auto/v1/ayodeji-kingsley/Website%202/Media%20And%20Awards/Media/Collect%20Art%20Magazine/44252f648493f2ff6c735c240b57270d",
+  },
+  {
+    id: "art11",
+    title: "Men’s Art Interview",
+    award: "Tamar Khelashvili, Collect Art Magazine, Georgia March, 2025",
+    link: "https://www.collectartwork.org/post/men-art-special-edition",
+    image:
+      "https://res.cloudinary.com/dl3haplj1/image/upload/f_auto,q_auto/v1/ayodeji-kingsley/Website%202/Media%20And%20Awards/mens-art",
   },
   {
     id: "art4",
@@ -32,30 +76,6 @@ export const artworks = [
     link: "https://www.insightsofayoungecologicalartist.com/features/in-conversation-ayodeji-kingsley",
     image:
       "https://res.cloudinary.com/dl3haplj1/image/upload/f_auto,q_auto/v1/ayodeji-kingsley/Website%202/Media%20And%20Awards/Media/Eco-%20Artist%20Interview/49abdbea03424f86ee4db6660366304a",
-  },
-  {
-    id: "art5",
-    title: "Published Catalogue",
-    award: "Iwalewa Gallery,Lagos December, 2021",
-    link: "https://anyflip.com/bookcase/aexu/",
-    image:
-      "https://res.cloudinary.com/dl3haplj1/image/upload/f_auto,q_auto/v1/ayodeji-kingsley/Website%202/Media%20And%20Awards/Media/Miniature%20Art%20fair/65d496698a668167659ad9694e06dea2",
-  },
-  {
-    id: "art6",
-    title: "Our Home – Natural World Interview",
-    award: "MetaSpace Gallery, Liverpool, UK March, 2025",
-    link: "https://metaspacegallery.co.uk/our-home-natural-world/",
-    image:
-      "https://res.cloudinary.com/dl3haplj1/image/upload/f_auto,q_auto/v1/ayodeji-kingsley/Website%202/Media%20And%20Awards/meta%20space",
-  },
-  {
-    id: "art7",
-    title: "Art Interview/Exhibition",
-    award: "Channels TV, Abuja, Nigeria September, 2021",
-    link: "https://youtu.be/tR-ezRO4vd4?si=CZM5Y2ywZ5kgCP-D",
-    image:
-      "https://res.cloudinary.com/dl3haplj1/image/upload/f_auto,q_auto/v1/ayodeji-kingsley/Website%202/Media%20And%20Awards/Media/Upcyling%20Redefined/b6a256fa85ddebd51b34e1b0b4570603",
   },
   {
     id: "art8",
@@ -82,11 +102,24 @@ export const artworks = [
       "https://res.cloudinary.com/dl3haplj1/image/upload/f_auto,q_auto/v1/ayodeji-kingsley/Website%202/Media%20And%20Awards/banks-mill",
   },
   {
-    id: "art11",
-    title: "Men’s Art Interview",
-    award: "Tamar Khelashvili, Collect Art Magazine, Georgia March, 2025",
-    link: "https://www.collectartwork.org/post/men-art-special-edition",
-    image:
-      "https://res.cloudinary.com/dl3haplj1/image/upload/f_auto,q_auto/v1/ayodeji-kingsley/Website%202/Media%20And%20Awards/mens-art",
+    id: "art13",
+    title: "Art Review",
+    award: "Sophie Nowakowska, Luminoir Art Gallery June, 2025",
+    link: "https://www.luminoirart.co.uk/post/critical-review-with-ayodeji-kingsley",
+    image: LuminoirPng,
+  },
+  {
+    id: "art14",
+    title: "Art Review",
+    award: "Tabish Khan, Our Culture Mag January, 2026",
+    link: "https://ourculturemag.com/2026/01/07/forged-from-the-anthropocene-ayodeji-kingsleys-machinery-of-nature/",
+    image: CulturePng,
+  },
+  {
+    id: "art15",
+    title: "Art Review/Interview",
+    award: "Alvin, The Black Art Review January, 2026",
+    link: "https://blackartreview.com/the-artist-studio/f/ayodeji-kingsley-on-agency-and-self-determination",
+    image: BlackArtPng,
   },
 ];
