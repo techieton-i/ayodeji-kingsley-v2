@@ -71,7 +71,7 @@ export default function AwardShowcaseScroll() {
         Selected Media
       </motion.h1>
 
-      {artworks.reverse().map((art, index) => {
+      {[...artworks].reverse().map((art, index) => {
         const ref = useRef(null);
         const isInView = useInView(ref, { once: true });
 

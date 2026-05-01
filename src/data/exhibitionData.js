@@ -9,6 +9,34 @@ const generateImageUrls = (folder, count, customNames) => {
 
 export const exhibitionData = [
   {
+    title: "HEXIS: Before the Seventh",
+    text: "Derby UK, February 2026.",
+    link: "https://www.artsteps.com/view/67ced284c9fda5a36847fbb3",
+    video:
+      "https://res.cloudinary.com/dl3haplj1/video/upload/v1777593336/ayodeji-kingsley/Website%202/Media%20And%20Awards/Media/Hexis_exhibition/hexis_introduction_mxauoh.mp4",
+    images: [
+      "https://res.cloudinary.com/dl3haplj1/image/upload/v1777591961/ayodeji-kingsley/Website%202/Media%20And%20Awards/Media/Hexis_exhibition/Hexis_preview_spxnqg.jpg",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/v1777592025/ayodeji-kingsley/Website%202/Media%20And%20Awards/Media/Hexis_exhibition/hexis_10_zq89mc.jpg",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/v1777592024/ayodeji-kingsley/Website%202/Media%20And%20Awards/Media/Hexis_exhibition/hexis_9_qxnvmp.jpg",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/v1777592023/ayodeji-kingsley/Website%202/Media%20And%20Awards/Media/Hexis_exhibition/hexis_6_yrhd2m.jpg",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/v1777592022/ayodeji-kingsley/Website%202/Media%20And%20Awards/Media/Hexis_exhibition/hexis_8_z30gac.jpg",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/v1777592022/ayodeji-kingsley/Website%202/Media%20And%20Awards/Media/Hexis_exhibition/hexis_7_y7o8hc.jpg",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/v1777592020/ayodeji-kingsley/Website%202/Media%20And%20Awards/Media/Hexis_exhibition/hexis_5_vks6h5.jpg",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/v1777592020/ayodeji-kingsley/Website%202/Media%20And%20Awards/Media/Hexis_exhibition/Hexis_3_ez2g2s.jpg",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/v1777592020/ayodeji-kingsley/Website%202/Media%20And%20Awards/Media/Hexis_exhibition/hexis_4_n3r1rp.jpg",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/v1777592019/ayodeji-kingsley/Website%202/Media%20And%20Awards/Media/Hexis_exhibition/hexis_2_puekyc.jpg",
+    ],
+  },
+  {
+    title: "Contemporary Art exhibition",
+    text: "London, UK September, 2025",
+    link: "https://www.woolffgallery.co.uk/froxfield-2025",
+    images: [
+      "https://res.cloudinary.com/dl3haplj1/image/upload/v1777600811/ayodeji-kingsley/Website%202/Media%20And%20Awards/Media/contemp_exhib1_ptmz8y.jpg",
+      "https://res.cloudinary.com/dl3haplj1/image/upload/v1777600810/ayodeji-kingsley/Website%202/Media%20And%20Awards/Media/contemp_exhib_cxwqxr.jpg",
+    ],
+  },
+  {
     title: "Domestic",
     text: "UK April, 2025",
     link: "https://www.artsteps.com/view/67ced284c9fda5a36847fbb3",

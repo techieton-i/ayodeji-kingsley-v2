@@ -69,7 +69,7 @@ const ArtGallerySlider = ({ images }) => {
   const handleNext = () => {
     setDirection(1);
     setCurrentIndex((prevIndex) =>
-      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1,
     );
 
     restartAutoPlay();
@@ -78,7 +78,7 @@ const ArtGallerySlider = ({ images }) => {
   const handlePrev = () => {
     setDirection(-1);
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1,
     );
 
     restartAutoPlay();
@@ -338,12 +338,12 @@ export const ImageSlider = ({ imageArray }) => {
         ? (prev + 1) % imageArray.length
         : prev === 0
           ? imageArray.length - 1
-          : prev - 1
+          : prev - 1,
     );
   };
 
   return (
-    <div className="relative w-full md:w-1/2 rounded-xl shadow-lg object-cover max-h-[70vh] cursor-pointer">
+    <div className="relative w-full rounded-xl shadow-lg object-cover max-h-[70vh] cursor-pointer">
       {!loaded && (
         <div className="absolute inset-0 flex items-center justify-center bg-opacity-70 bg-gray-100 z-10">
           <div className="w-8 h-8 border-4 border-gray-300 border-t-transparent rounded-full animate-spin" />

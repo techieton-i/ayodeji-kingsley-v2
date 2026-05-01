@@ -118,8 +118,16 @@ export const artworks = [
   {
     id: "art15",
     title: "Art Review/Interview",
-    award: "Alvin, The Black Art Review January, 2026",
+    award: "Alvin Jackson, The Black Art Review January, 2026",
     link: "https://blackartreview.com/the-artist-studio/f/ayodeji-kingsley-on-agency-and-self-determination",
     image: BlackArtPng,
+  },
+  {
+    id: "art16",
+    title: "Art Review",
+    award: "Joana Alarcao, IOAEA, Portugal, April  2026",
+    link: "https://www.insightsofayoungecologicalartist.com/art/the-intelligence-of-poise-the-solo-exhibition-of-ayodeji-kingsley",
+    image:
+      "https://res.cloudinary.com/dl3haplj1/image/upload/v1777591962/ayodeji-kingsley/Website%202/Media%20And%20Awards/Media/joana_alarco_bbtc54.jpg",
   },
 ];

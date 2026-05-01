@@ -13,6 +13,7 @@ const Home = () => {
       <HeroSection />
       <div className="mx-auto">
         <AboutSection />
+        <LatestEventsSection />
         <CTASection />
       </div>
     </motion.div>
@@ -297,6 +298,62 @@ const CTASection = () => {
           View Collections
         </Link>
       </motion.div>
+    </motion.section>
+  );
+};
+
+const LatestEventsSection = () => {
+  return (
+    <motion.section
+      className="py-16 px-4 bg-gray-50 dark:bg-gray-900 overflow-hidden"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+    >
+      <div className="max-w-5xl mx-auto">
+        <Link
+          to="/exhibitions"
+          className="block relative group overflow-hidden rounded-xl shadow-2xl border border-gray-100 dark:border-gray-800 transition-all duration-500 hover:shadow-orange-500/10"
+        >
+          <div className="relative aspect-video md:aspect-[21/9] w-full bg-black overflow-hidden">
+            <video
+              className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 opacity-90 group-hover:opacity-100"
+              src="https://res.cloudinary.com/dl3haplj1/video/upload/v1777593336/ayodeji-kingsley/Website%202/Media%20And%20Awards/Media/Hexis_exhibition/hexis_introduction_mxauoh.mp4"
+              muted
+              loop
+              playsInline
+              onMouseEnter={(e) => e.target.play()}
+              onMouseLeave={(e) => {
+                e.target.pause();
+                e.target.currentTime = 0;
+              }}
+              poster="https://res.cloudinary.com/dl3haplj1/image/upload/v1777591961/ayodeji-kingsley/Website%202/Media%20And%20Awards/Media/Hexis_exhibition/Hexis_preview_spxnqg.jpg"
+            />
+
+            {/* Cinematic Gradient Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent pointer-events-none" />
+
+            {/* Minimal Content Overlay */}
+            <div className="absolute bottom-0 left-0 right-0 p-6 md:p-12 flex flex-col md:flex-row md:items-end justify-between gap-6 pointer-events-none">
+              <div>
+                <span className="inline-block px-4 py-1 text-xs font-bold tracking-widest uppercase text-white bg-orange-600/90 backdrop-blur-md rounded-full font-heading mb-4 shadow-lg">
+                  Latest Exhibition
+                </span>
+                <h3 className="text-3xl md:text-5xl font-bold text-white font-heading leading-tight drop-shadow-lg">
+                  HEXIS: Before the Seventh
+                </h3>
+              </div>
+
+              <div className="shrink-0">
+                <span className="inline-flex items-center justify-center px-8 py-3.5 border-2 border-white/80 text-sm font-bold tracking-wide uppercase rounded-full text-white backdrop-blur-sm group-hover:bg-white group-hover:text-black transition-all duration-300">
+                  View Exhibition
+                </span>
+              </div>
+            </div>
+          </div>
+        </Link>
+      </div>
     </motion.section>
   );
 };

@@ -18,24 +18,24 @@ const logos = [logo1, logo2, logo3, logo4, logo5, logo6];
 const Footer = () => {
   return (
     <footer className="bg-neutral-900 text-white py-8 px-4 lg:px-6">
-      <div className="flex flex-col lg:flex-row justify-between items-center gap-5 xl:px-[8rem] mx-auto w-full">
-        <div className="lg:w-1/3 flex gap-6 items-center flex-wrap justify-center lg:justify-start py-5">
+      <div className="flex flex-col lg:flex-row justify-between items-center gap-8 xl:px-[8rem] mx-auto w-full">
+        <div className="grid grid-cols-3 2xl:grid-cols-6 gap-4 sm:gap-6 items-center justify-center lg:justify-start py-5 w-full md:w-auto">
           {logos.map((src, i) => (
             <img
               key={i}
               src={src}
               alt={`logo-${i}`}
-              className="h-20 object-contain"
+              className="h-12 sm:h-16 lg:h-20 object-contain mx-auto lg:mx-0"
             />
           ))}
         </div>
 
-        <div className="text-sm text-center leading-relaxed">
+        <div className="text-sm text-center leading-relaxed shrink-0">
           <p>Privacy Policy | ayodeji-kingsley</p>
           <p>©2025 | Website Design by techieton-i | All Rights Reserved</p>
         </div>
 
-        <div className="flex flex-wrap items-center gap-10 text-xl">
+        <div className="flex flex-nowrap items-center justify-center gap-6 sm:gap-8 lg:gap-10 text-xl shrink-0 py-2">
           <a
             href="https://pinterest.com/appreciatekingsley"
             target="_blank"
