@@ -3,6 +3,8 @@ import { artworks } from "@/data/awardData";
 import { useInView, motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 
+const displayedArtworks = [...artworks].reverse();
+
 const awardList = [
   {
     title: "Arthouse Gallery January Artist of the Month",
@@ -71,7 +73,7 @@ export default function AwardShowcaseScroll() {
         Selected Media
       </motion.h1>
 
-      {[...artworks].reverse().map((art, index) => {
+      {displayedArtworks.map((art, index) => {
         const ref = useRef(null);
         const isInView = useInView(ref, { once: true });
 
@@ -107,7 +109,7 @@ export default function AwardShowcaseScroll() {
                 <p className="text-gray-700 leading-relaxed">
                   {art.description}
                 </p>
-                {index < artworks.length - 1 && (
+                {index < displayedArtworks.length - 1 && (
                   <button
                     onClick={() => scrollToSection(index + 1)}
                     className="mt-6 px-6 py-2 bg-rust-600 text-white rounded-full hover:bg-rust-700 transition"
@@ -134,10 +136,10 @@ export default function AwardShowcaseScroll() {
 
       {/* Dot Navigation */}
       <div className="fixed right-3 md:right-6 top-1/2 transform -translate-y-1/2 hidden sm:flex flex-col gap-4 z-50">
-        {artworks.map((_, index) => (
-          <div key={index} className="group relative">
+        {displayedArtworks.map((art, index) => (
+          <div key={art.id} className="group relative">
             <div className="absolute right-6 top-1/2 -translate-y-1/2 scale-0 group-hover:scale-100 transition-transform bg-black text-white text-xs px-2 py-1 rounded opacity-90 whitespace-nowrap">
-              {artworks[index].title}
+              {art.title}
             </div>
             <button
               onClick={() => scrollToSection(index)}

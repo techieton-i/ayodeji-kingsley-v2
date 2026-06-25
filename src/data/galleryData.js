@@ -228,23 +228,6 @@ Of value and judgment, and knowing it well.
     dimensions: "Dimensions - 15 x 7 x 15 inches",
   },
   {
-    id: 12,
-    title: "QUAIL-IFIED",
-    description: `"Quail-ified," a sculpture employing a wordplay on "qualified" and the quail, serves as an exploration of equality, opportunity, and inherent worth. The artwork engages with the central message of the Yoruba proverb, "Aparo kan ko ga ju aparo kan lo, a fi eyi ti o ba gun ori ebe," translated as, "No quail is taller than another quail except for the one that ascends a ridge."
-By juxtaposing the quail image with the concept of qualification, the sculpture challenges notions of inherent hierarchy. It critiques societal tendencies to construct hierarchies based on superficial differences, prompting a recognition of fundamental human similarities. As the proverb and "Quail-ified" both assert, perceived advantages are often situational, akin to the quail on the ridge, and do not alter the intrinsic nature of the individual. "Quail-ified" reinforces that while some may occupy a seemingly "higher platform," this does not diminish the inherent worth or potential of others.
-The sculpture implicitly critiques the societal tendency to create hierarchies based on superficial differences. It prompts us to look beyond the surface and recognize that all individuals share fundamental similarities. As the proverb suggests, and as "Quail-ified" reinforces, the shared biological functions of eating, reproduction, respiration, and excretion underscore our common humanity and the artificiality of many societal divisions. The Yoruba proverb reminds us that any perceived advantage is often situational, like the quail on the ridge. It doesn't change the fundamental nature of the quail. Similarly, "Quail-ified" asserts that while some may appear to have a "higher platform" at any given moment, this doesn't diminish the inherent worth or potential of others.
-The work challenges the notion that individuals are inherently more deserving or capable, reminding viewers that external circumstances such as access to resources, education, and social networks often generate the illusion of inequality. "Quail-ified" functions as a potent statement on equality and opportunity, encouraging the embrace of inherent qualification and a critical examination of systems that perpetuate inequality. Through the juxtaposition of imagery and concept, the sculpture invites a reconsideration of perceptions and advocates for a more equitable world.
-`,
-    year: "2020",
-    images: [
-      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low,w_720/v1/ayodeji-kingsley/Selected/Gallery/Quailified/quail",
-      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low,w_720/v1/ayodeji-kingsley/Selected/Gallery/Quailified/quail2",
-      "https://res.cloudinary.com/dl3haplj1/image/upload/f_webp,q_auto:low,w_720/v1/ayodeji-kingsley/Selected/Gallery/Quailified/quail3",
-    ],
-    medium: "Metal scrap",
-    dimensions: "Dimensions - 13 x 12 x 20 inches",
-  },
-  {
     id: 13,
     title: "Sanctuary",
     images: [
