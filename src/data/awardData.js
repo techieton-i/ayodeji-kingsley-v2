@@ -2,6 +2,8 @@ import VanguardPng from "@assets/Vanguard.png";
 import CulturePng from "@assets/our Culture Mag.png";
 import LuminoirPng from "@assets/Luminoir.png";
 import BlackArtPng from "@assets/Black Art review.png";
+import NewTelegraphArtReviewPng from "@assets/new-telegraph-art-review-may-2026.jpg";
+import TrendngArtistFocusPng from "@assets/trendng-artist-focus-march-2026.jpg";
 
 export const artworks = [
   {
@@ -123,11 +125,25 @@ export const artworks = [
     image: BlackArtPng,
   },
   {
+    id: "art17",
+    title: "Artist Focus/ Art Review",
+    award: "K Futur, Trendng, March 2026",
+    link: "https://trendng.com/derby/people/artist-focus-artist-focus-ayoola-ayodeji-kingsley-forging-memory-metal-and-meaning-in-derby/",
+    image: TrendngArtistFocusPng,
+  },
+  {
     id: "art16",
     title: "Art Review",
     award: "Joana Alarcao, IOAEA, Portugal, April  2026",
     link: "https://www.insightsofayoungecologicalartist.com/art/the-intelligence-of-poise-the-solo-exhibition-of-ayodeji-kingsley",
     image:
       "https://res.cloudinary.com/dl3haplj1/image/upload/v1777591962/ayodeji-kingsley/Website%202/Media%20And%20Awards/Media/joana_alarco_bbtc54.jpg",
+  },
+  {
+    id: "art18",
+    title: "Art Review",
+    award: "Udemma Chukwuma, New Telegraph, May 2026",
+    link: "https://newtelegraphng.com/engineering-blueprints-to-sculptural-narratives-ayodeji-kingsleys-art-takes-flight/",
+    image: NewTelegraphArtReviewPng,
   },
 ];
